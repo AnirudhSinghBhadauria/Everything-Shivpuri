@@ -1,0 +1,47 @@
+@import "../../../assets/base.scss";
+
+.footer {
+  @include flex(row, space-evenly, center);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: max-content;
+  background-color: white;
+  margin: 0 auto;
+  margin-block: 1rem;
+  gap: 1rem;
+
+  section:nth-of-type(1) {
+    position: relative;
+    width: clamp(14.3125rem, 28.625vw, 28.125rem);
+    height: clamp(14.3125rem, 28.625vw, 28.125rem);
+
+    p {
+      font-size: clamp(1.625rem, 3.25vw, 2.75rem);
+      position: relative;
+      color: #323232;
+      padding: 1rem;
+      z-index: 1;
+      text-align: right;
+    }
+
+    .footerImage {
+      border-radius: 1rem;
+      z-index: 0;
+    }
+  }
+
+  section:nth-of-type(2) {
+    @include flex(column, center, space-evenly);
+
+    .SecondfooterImageContainer {
+      position: relative;
+      width: clamp(14.3125rem, 28.625vw, 28.125rem);
+      height: clamp(8.0625rem, 16.125vw, 15.625rem);
+      background-color: $primary-yellow;
+    }
+
+    div:nth-of-type(2) {
+      @include flex(row, space-evenly, center);
+    }
+  }
+}
