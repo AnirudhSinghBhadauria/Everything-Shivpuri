@@ -1,0 +1,69 @@
+@import "../../../assets/base.scss";
+
+.navWrapper {
+  @include flex(row, space-between, center);
+  width: 100%;
+  padding: 0.75rem 5rem;
+
+  .ES {
+    flex: 2;
+    width: 80px;
+    height: 45px;
+  }
+
+  section:nth-of-type(1) {
+    @include flex(row, flex-start, center);
+    gap: 3rem;
+    flex: 4;
+
+    a {
+      color: rgba(245, 245, 245, 0.707);
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 300ms ease;
+
+      &:hover {
+        color: black;
+        background-color: $primary-yellow;
+      }
+    }
+  }
+
+  section:nth-of-type(2) {
+    @include flex(row, center, center);
+    flex: 3;
+
+    a {
+      background: none;
+      color: whitesmoke;
+      padding: 0.4rem 1.5rem;
+      font-size: 0.8rem;
+      border-radius: 2rem;
+      border: 1px solid $primary-yellow;
+      transition: all 200ms linear;
+
+      &:hover {
+        color: $primary-yellow;
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 13px;
+    }
+
+    .line {
+      width: 2rem;
+      height: 0.1rem;
+      background-color: $primary-yellow;
+    }
+
+    .mailWrapper {
+      @include flex(row, center, center);
+      background-color: $primary-yellow;
+      padding: 0.4rem;
+      border-radius: 5rem;
+    }
+  }
+}

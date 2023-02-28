@@ -2,18 +2,20 @@
 
 .footer {
   @include flex(row, space-evenly, center);
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: 1rem;
   width: max-content;
   background-color: white;
   margin: 0 auto;
   margin-block: 1rem;
   gap: 1rem;
+  border-radius: 1rem;
 
   section:nth-of-type(1) {
     position: relative;
-    width: clamp(14.3125rem, 28.625vw, 28.125rem);
-    height: clamp(14.3125rem, 28.625vw, 28.125rem);
+    width: clamp(15.5rem, 31vw, 30.5rem);
+    height: clamp(15.5rem, 31vw, 30.5rem);
+    overflow: hidden;
+    border-radius: 1rem;
 
     p {
       font-size: clamp(1.625rem, 3.25vw, 2.75rem);
@@ -24,24 +26,70 @@
       text-align: right;
     }
 
+    button {
+      z-index: 1;
+      position: relative;
+    }
+
     .footerImage {
       border-radius: 1rem;
       z-index: 0;
+      transition: all 0.5s ease;
+    }
+
+    &:hover {
+      .footerImage {
+        transform: scale(1.05);
+      }
     }
   }
 
   section:nth-of-type(2) {
     @include flex(column, center, space-evenly);
+    gap: 1rem;
 
-    .SecondfooterImageContainer {
-      position: relative;
+    .secondBigContainer {
       width: clamp(14.3125rem, 28.625vw, 28.125rem);
       height: clamp(8.0625rem, 16.125vw, 15.625rem);
-      background-color: $primary-yellow;
+      @include flex(column, space-between, null);
+      background-color: #d7d9dd;
+      color: #323232;
+      border-radius: 1rem;
+      overflow: hidden;
+      padding: 1rem;
+      position: relative;
+
+      div:nth-of-type(1) {
+        @include flex(row, space-between, center);
+        p {
+          color: #323232;
+          font-size: clamp(0.75rem, 1.5vw, 1rem);
+        }
+        svg {
+          transition: transform 100ms linear;
+          position: relative;
+          z-index: 1;
+        }
+      }
+
+      div:nth-of-type(2) {
+        @include flex(column, flex-start, flex-start);
+        
+        h2 {
+          color: #323232;
+          font-size: clamp(1.15rem, 2.25vw, 1.75rem);
+        }
+      }
+
+      &:hover {
+        svg {
+          transform: translate(3px, -3px);
+        }
+      }
     }
 
     div:nth-of-type(2) {
-      @include flex(row, space-evenly, center);
+      @include flex(row, space-between, center);
     }
   }
 }
