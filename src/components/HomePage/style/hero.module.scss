@@ -1,0 +1,84 @@
+@import "../../../assets/base.scss";
+
+.wrapper {
+  @include flex(column, flex-start, center);
+
+  .topSection {
+    @include flex(row, space-evenly, center);
+    width: 100%;
+    gap: 1rem;
+
+    div {
+      @include flex(row, space-around, center);
+      width: 100%;
+      border-radius: 1rem;
+      padding: 1rem;
+      gap: 1rem;
+      background-color: white;
+
+      &:hover {
+        .heroImage {
+          transform: scale(1.03);
+        }
+      }
+
+      section:nth-of-type(1) {
+        h1 {
+          font-size: clamp(2.25rem, 4.5vw, 4rem);
+          color: black;
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          color: black;
+          font-size: 0.875rem;
+          margin-top: 0.5rem;
+        }
+      }
+
+      section:nth-of-type(2) {
+        @include flex(row, center, center);
+        overflow: hidden;
+        border-radius: 1rem;
+
+        .heroImage {
+          width: clamp(12.25rem, 24.5vw, 24rem);
+          height: clamp(8.5rem, 17vw, 16.5rem);
+
+          border-radius: 1rem;
+          filter: contrast(115%) grayscale(40%);
+          transition: all 350ms ease;
+        }
+      }
+    }
+
+    .joinButton {
+      @include flex(column, space-evenly, center);
+      gap: 1rem;
+      background-color: $primary-orange;
+      padding: 2rem 1.75rem;
+      border-radius: 1.5rem;
+
+      p {
+        color: black;
+        font-size: clamp(0.875rem, 1.75vw, 1.25rem);
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+      }
+
+      svg {
+        width: 25px;
+        height: 25px;
+        transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      &:hover {
+        svg {
+          transform: translate(3px, -3px);
+        }
+      }
+    }
+  }
+  //   .bottomSection {
+  //   }
+}

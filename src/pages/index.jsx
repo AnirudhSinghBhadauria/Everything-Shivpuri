@@ -1,11 +1,15 @@
-import ES from '@/assets/svg/ES'
-import React from 'react'
-import classes from '../styles/homepage.module.scss'
+import React, { Fragment } from "react";
+import classes from "../styles/homepage.module.scss";
+import Hero from "@/components/HomePage/Hero";
+import SlantingCards from "@/components/HomePage/SlantingCards";
 
 const HomePage = () => {
   return (
-    <h1>HomePage</h1>
-  )
-}
+    <Fragment>
+      <Hero />
+      {/* <SlantingCards /> */}
+    </Fragment>
+  );
+};
 
-export default HomePage
+export default HomePage;

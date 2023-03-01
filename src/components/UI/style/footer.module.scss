@@ -10,12 +10,12 @@
   gap: 1rem;
   border-radius: 1rem;
 
-  section:nth-of-type(1) {
-    position: relative;
+  .chatriSection {
     width: clamp(15.5rem, 31vw, 30.5rem);
     height: clamp(15.5rem, 31vw, 30.5rem);
     overflow: hidden;
     border-radius: 1rem;
+    position: relative;
 
     p {
       font-size: clamp(1.625rem, 3.25vw, 2.75rem);
@@ -44,7 +44,7 @@
     }
   }
 
-  section:nth-of-type(2) {
+  section{
     @include flex(column, center, space-evenly);
     gap: 1rem;
 
@@ -74,7 +74,7 @@
 
       div:nth-of-type(2) {
         @include flex(column, flex-start, flex-start);
-        
+
         h2 {
           color: #323232;
           font-size: clamp(1.15rem, 2.25vw, 1.75rem);

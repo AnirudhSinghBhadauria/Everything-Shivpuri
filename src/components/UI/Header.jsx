@@ -1,6 +1,10 @@
 import React from "react";
 import classes from "./style/header.module.scss";
-import { Regular, RegularMedium, RegularSemiBold } from "../../assets/Fonts/fonts";
+import {
+  Regular,
+  RegularMedium,
+  RegularSemiBold,
+} from "../../assets/Fonts/fonts";
 import ES from "@/assets/svg/ES";
 import Mail from "@/assets/svg/Mail";
 import Link from "next/link";
@@ -8,7 +12,9 @@ import Link from "next/link";
 const Header = () => {
   return (
     <nav className={classes.navWrapper}>
-      <ES className={classes.ES} fill="hsl(66, 100%, 72%)" />
+      <Link className={classes.ESContainer}  href="/">
+        <ES className={classes.ES} fill="white" />
+      </Link>
 
       <section className={RegularMedium.className}>
         <Link href="#">ABOUT</Link>

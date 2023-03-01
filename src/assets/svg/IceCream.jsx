@@ -3,6 +3,7 @@ import React from "react";
 const IceCream = (props) => {
   return (
     <svg
+    className={props.className}
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"
@@ -15,7 +16,7 @@ const IceCream = (props) => {
         x2="0.725998"
         y2="14.8449"
         stroke={props.fill}
-       strokeWidth="2"
+        strokeWidth="2"
       />
       <line
         x1="13.8533"
@@ -23,7 +24,7 @@ const IceCream = (props) => {
         x2="14.0968"
         y2="13.0292"
         stroke={props.fill}
-       strokeWidth="2"
+        strokeWidth="2"
       />
       <line
         x1="14.8535"
@@ -31,7 +32,7 @@ const IceCream = (props) => {
         x2="1.85348"
         y2="1.05023"
         stroke={props.fill}
-       strokeWidth="2"
+        strokeWidth="2"
       />
     </svg>
   );
