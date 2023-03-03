@@ -91,7 +91,7 @@ const Hero = () => {
               >
                 Weather Forecast
               </ButtonLink>
-                <h1 className={Regular.className}>{`${"01"}`}<sup>.</sup></h1>
+                <h1 className={Regular.className}>{`${"30"}`}<sup>.</sup></h1>
             </section>
 
             <section>

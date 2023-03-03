@@ -1,0 +1,10 @@
+@import "../../../assets/base.scss";
+
+.wrapper {
+  @include flex(column, center, center);
+  padding: 4rem 0rem;
+  min-height: 90vh;
+  position: relative;
+}
+
+

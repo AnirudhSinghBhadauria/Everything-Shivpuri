@@ -2,3 +2,9 @@
   padding: 0.5rem clamp(7.75rem, 15.5vw, 15rem);
   // padding: 0.5rem 10rem;
 }
+
+@media (max-width: '1200px'){
+  .main{
+    padding: 0.5rem clamp(1.5rem, 3vw, 2.5rem);
+  }
+}

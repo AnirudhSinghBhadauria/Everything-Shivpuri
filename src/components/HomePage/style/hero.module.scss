@@ -3,6 +3,7 @@
 .wrapper {
   @include flex(column, flex-start, center);
   gap: 1.5rem;
+  margin-bottom: 2rem;
 
   .topSection {
     @include flex(row, space-evenly, center);
@@ -107,7 +108,6 @@
           bottom: 1rem;
           font-size: clamp(1rem, 2.5vw, 2.5rem);
           z-index: 0;
-          color: #ffffff;
           color: $primary-blue;
           text-align: center;
         }
@@ -207,7 +207,6 @@
           padding: 0.5rem;
 
           p {
-            // padding: 0rem 0.5rem;
             line-height: 1.25rem;
             color: black;
             font-size: 1rem;
