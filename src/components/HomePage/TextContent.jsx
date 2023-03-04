@@ -7,7 +7,7 @@ const TextContnet = () => {
     <section className={classes.wrapper}>
       <Description
         label="GENRAL"
-        path="/Good-To-Know"
+        path="/Genral"
         main="GENRAL"
         secondary="C.III S.IX"
         desc="Genral knowledge everybody need to know about Shivpuri! Religious Places,

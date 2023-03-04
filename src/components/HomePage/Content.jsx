@@ -8,7 +8,7 @@ const Content = () => {
     <section className={classes.wrapper}>
       <Cards
         title="GENRAL"
-        href="/Good-To-Know"
+        href="/Genral"
         label="genral stuff"
         style={{
           backgroundColor: "hsl(100, 100%, 100%)",

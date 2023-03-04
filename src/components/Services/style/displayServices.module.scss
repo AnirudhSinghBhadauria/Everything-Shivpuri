@@ -1,0 +1,7 @@
+@import '../../../assets/base.scss';
+
+.serviceContainer{
+     @include flex(row, flex-start, center);
+     flex-wrap: wrap;
+     padding-block: 5rem;
+}

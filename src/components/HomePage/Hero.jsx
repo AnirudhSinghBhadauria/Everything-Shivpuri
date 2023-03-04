@@ -61,6 +61,7 @@ const Hero = () => {
               aria-label="chatri-display"
               width="250"
               height="250"
+              alt="chatri"
             />
             <h2 className={RegularBold.className}>CULTURAL HERITAGE</h2>
           </div>

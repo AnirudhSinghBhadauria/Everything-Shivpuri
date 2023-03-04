@@ -1,0 +1,49 @@
+@import "../../../assets/base.scss";
+
+.card {
+  width: 28rem;
+  //   width: clamp(14.25rem,28.5vw,28rem);
+  height: 25rem;
+  background-color: white;
+  border-radius: 1rem;
+  color: transparent;
+  margin: 1rem;
+//   padding: 0.1rem;
+
+  .imageContainer {
+    height: 16rem;
+    width: 100%;
+    position: relative;
+
+    img{
+     border-radius: 1rem;
+     border-bottom-left-radius: 0;
+     border-bottom-right-radius: 0;
+    }
+  }
+
+  div {
+    @include flex(column, space-between, flex-start);
+    gap: 3rem;
+    padding: 1rem;
+    
+    .headingContainer {
+      @include flex(row, space-between, center);
+      width: 100%;
+
+      h2 {
+        font-size: 1.6rem;
+        color: black;
+      }
+    }
+
+    .button {
+      background-color: transparent;
+      border-radius: 1rem;
+      color: black;
+      border: 1px solid black;
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+    }
+  }
+}
