@@ -1,39 +1,41 @@
 @import "../../../assets/base.scss";
 
 .card {
-  width: 28rem;
+  width: 24rem;
   //   width: clamp(14.25rem,28.5vw,28rem);
-  height: 25rem;
-  background-color: white;
+  height: 21rem;
   border-radius: 1rem;
   color: transparent;
   margin: 1rem;
-//   padding: 0.1rem;
+  //   padding: 0.1rem;
 
   .imageContainer {
-    height: 16rem;
+    height: 13.5rem;
     width: 100%;
     position: relative;
 
-    img{
-     border-radius: 1rem;
-     border-bottom-left-radius: 0;
-     border-bottom-right-radius: 0;
+    img {
+      border-radius: 1rem;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
   }
 
   div {
     @include flex(column, space-between, flex-start);
-    gap: 3rem;
+    gap: 1.85rem;
     padding: 1rem;
-    
+
     .headingContainer {
       @include flex(row, space-between, center);
       width: 100%;
 
       h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         color: black;
+      }
+      svg {
+        transition: all 200ms linear;
       }
     }
 
@@ -44,6 +46,17 @@
       border: 1px solid black;
       padding: 0.5rem 1rem;
       font-size: 0.75rem;
+      cursor: pointer;
+    }
+
+    section {
+      @include flex(row, space-evenly, center);
+      gap: 0.5rem;
+    }
+  }
+  &:hover {
+    svg {
+      transform: translate(3px, -3px);
     }
   }
 }

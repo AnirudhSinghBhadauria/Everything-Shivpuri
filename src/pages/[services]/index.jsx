@@ -2,13 +2,10 @@ import React from "react";
 import { getData } from "@/lib/getData";
 import DisplayServices from "@/components/Services/DisplayServices";
 
-const Services = (props) => {
-  const { services } = props;
+const Services = ({ services }) => {
   const { Error, Data } = services;
 
-  console.log(Data.array);
-
-  return <DisplayServices />;
+  return <DisplayServices services={Data.array}/>;
 };
 
 export default Services;
@@ -29,7 +26,6 @@ export async function getStaticPaths() {
   const pathsData = paths.Data.array;
 
   const path = pathsData.map((path) => ({ params: { services: path } }));
-  console.log(path);
 
   return {
     paths: path,

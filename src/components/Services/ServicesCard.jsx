@@ -4,45 +4,81 @@ import React from "react";
 import ButtonLink from "../Helper/ButtonLink";
 import classes from "../Services/style/servicesCard.module.scss";
 import Image from "next/image";
+import CopyButton from "../Helper/CopyButton";
 
-const ServicesCard = () => {
-  return (
-    <div className={classes.card}>
-      <section className={classes.imageContainer}>
-        <Image
-          src="https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/services%2FBanks.webp?alt=media&token=0bae678c-e6cf-452d-9373-2f56b5ff50c2"
-          fill
-          alt="/"
-        />
-      </section>
-      <div>
-        <section className={classes.headingContainer}>
-          <h2 className={RegularMedium.className}>BANKS</h2>
-          <IceCream fill="black" />
-        </section>
-        <ButtonLink
-          href="/"
-          label="/"
-          className={`${RegularBold.className} ${classes.button}`}
-        >
-          DETAILS
-        </ButtonLink>
-        {/* <section>
+const ServicesCard = (props) => {
+  let buttons;
+
+  if (props.phone || props.location) {
+    if (props.phone && props.location) {
+      buttons = (
+        <section>
           <ButtonLink
-            href="/"
-            label="/"
-            className={`${RegularBold.className} ${classes.button}`}
-          >
-            PHONE
-          </ButtonLink>{" "}
-          <ButtonLink
-            href="/"
-            label="/"
+            href={props.location}
+            label="location"
+            target="_blank"
             className={`${RegularBold.className} ${classes.button}`}
           >
             LOCATION
           </ButtonLink>
-        </section> */}
+          <ButtonLink
+            href={`tel: ${props.phone}`}
+            label="phoneNumber"
+            className={`${RegularBold.className} ${classes.button}`}
+          >
+            PHONE
+          </ButtonLink>
+          <CopyButton className={classes.button} phone={props.phone} />
+        </section>
+      );
+    } else if (!props.phone) {
+      buttons = (
+        <ButtonLink
+          href={props.location}
+          label="location"
+          target="_blank"
+          className={`${RegularBold.className} ${classes.button}`}
+        >
+          LOCATION
+        </ButtonLink>
+      );
+    } else {
+      buttons = (
+        <section>
+          <ButtonLink
+            href={props.phone}
+            label="phoneNumber"
+            className={`${RegularBold.className} ${classes.button}`}
+          >
+            PHONE
+          </ButtonLink>
+          <CopyButton className={classes.button} phone={props.phone} />
+        </section>
+      );
+    }
+  } else {
+    buttons = (
+      <ButtonLink
+        href={props.href}
+        label={props.id}
+        className={`${RegularBold.className} ${classes.button}`}
+      >
+        DETAILS
+      </ButtonLink>
+    );
+  }
+
+  return (
+    <div style={{ backgroundColor: props.back }} className={classes.card}>
+      <section className={classes.imageContainer}>
+        <Image src={props.src} fill alt={props.id} />
+      </section>
+      <div>
+        <section className={classes.headingContainer}>
+          <h2 className={RegularMedium.className}>{props.name}</h2>
+          <IceCream fill="black" />
+        </section>
+        {buttons}
       </div>
     </div>
   );
