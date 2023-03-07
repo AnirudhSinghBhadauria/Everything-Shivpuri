@@ -20,3 +20,59 @@ export async function getData(collection, document) {
     };
   }
 }
+
+
+export const options = [
+  {
+    value: 'Religious',
+    input: 'Religious'
+  },
+  {
+    value: 'HealthCare',
+    input: 'Health Care'
+  },
+  {
+    value: 'Banks',
+    input: 'Banks'
+  },
+  {
+    value: 'Education',
+    input: 'Education'
+  },
+  {
+    value: 'Emergency',
+    input: 'Emergency'
+  },
+  {
+    value: 'Hotels',
+    input: 'Hotels'
+  },
+  {
+    value: 'FoodCafe',
+    input: 'Food & Cafe'
+  },
+  {
+    value: 'Tourist',
+    input: 'Tourist'
+  },
+  {
+    value: 'Theatres',
+    input: 'Theatres'
+  },
+  {
+    value: 'Supermarkets',
+    input: 'Super Markets'
+  },
+  {
+    value: 'Electronics',
+    input: 'Electronics'
+  },
+  {
+    value: 'Garments',
+    input: 'Garments'
+  },
+  {
+    value: 'Salons',
+    input: 'Salons'
+  },
+]

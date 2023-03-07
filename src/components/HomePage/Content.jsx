@@ -36,22 +36,22 @@ const Content = () => {
         style={{ backgroundColor: "hsl(14, 99%, 50%)", zIndex: 3 }}
       />
       <Cards
-        title="FEATURINGS"
-        href="/Featured"
-        label="Featured"
+        title="COMMUNITY"
+        href="#"
+        label="community"
         style={{
-          backgroundColor: "hsl(66, 100%, 72%)",
+          backgroundColor: "hsl(262, 97%, 76%)",
           zIndex: 4,
           right: "16%",
           bottom: "26%",
         }}
       />
       <Cards
-        title="COMMUNITY"
-        href="#"
-        label="community"
+        title="ADD BUSINESSES"
+        href="/AddBusinesses"
+        label="addbusniess"
         style={{
-          backgroundColor: "hsl(262, 97%, 76%)",
+          backgroundColor: "hsl(66, 100%, 72%)",
           zIndex: 5,
           right: "2%",
           bottom: "17%",

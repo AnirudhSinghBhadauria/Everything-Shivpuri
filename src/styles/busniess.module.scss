@@ -1,0 +1,25 @@
+@import "../assets/base.scss";
+
+.container {
+  @include flex(row, space-evenly, center);
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  
+  form{
+       @include flex(column, space-evenly, center);
+       gap: 1rem;
+       background-color: white;
+       padding: 1rem;
+       border-radius: 1rem;
+
+       input:nth-of-type(1){
+          display: none;
+       }
+       label{
+          color: white;
+          padding: 0.25rem 0.8rem;
+          background-color: #3B3B3B;
+       }
+  }
+}
