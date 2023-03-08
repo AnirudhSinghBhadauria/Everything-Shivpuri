@@ -1,16 +1,21 @@
 export const INITIAL_STATE = {
   name: "NAME GOES HERE",
   phone: "PHONE NUMBER OF BUSNIESS",
-  location: "LOCATION OF BUSNIESS",
-  imgStatus: 'false',
+  location: "",
+  category: "YOUR CATEGORY",
+  imgStatus: false,
+  curruntPath: "",
+  back: "",
 
   imgName: "",
-  imgSize: '',
+  imgSize: "",
   imgSrc: "",
   width: "",
   height: "",
   category: "",
   file: "",
+
+  disabled: true,
   error: "",
 };
 
@@ -30,6 +35,11 @@ export const busniessReducer = (state, action) => {
       return {
         ...state,
         location: action.payload,
+      };
+    case "CAT":
+      return {
+        ...state,
+        category: action.payload,
       };
     case "FILE":
       return {
@@ -71,10 +81,25 @@ export const busniessReducer = (state, action) => {
         ...state,
         category: action.payload,
       };
+    case "BACK":
+      return {
+        ...state,
+        back: action.payload,
+      };
+    case "PATH":
+      return {
+        ...state,
+        curruntPath: action.payload,
+      };
     case "ERROR":
       return {
         ...state,
         error: action.payload,
+      };
+    case "DISS":
+      return {
+        ...state,
+        disabled: action.payload,
       };
 
     default:

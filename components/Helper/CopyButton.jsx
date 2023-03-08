@@ -1,4 +1,4 @@
-import { RegularBold } from "@/assets/Fonts/fonts";
+import { RegularBold } from "../../assets/Fonts/fonts";
 import React, { useState } from "react";
 
 const CopyButton = (props) => {

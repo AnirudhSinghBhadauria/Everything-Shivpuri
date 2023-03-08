@@ -5,8 +5,8 @@ import {
   RegularMedium,
   RegularSemiBold,
 } from "../../assets/Fonts/fonts";
-import ES from "@/assets/svg/ES";
-import Mail from "@/assets/svg/Mail";
+import ES from "../../assets/svg/ES";
+import Mail from "../../assets/svg/Mail";
 import Link from "next/link";
 
 const Header = () => {

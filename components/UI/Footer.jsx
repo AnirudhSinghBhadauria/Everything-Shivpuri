@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 import FooterCard from "./FooterCard";
 import CardLink from "../Helper/CardLink";
-import IceCream from "@/assets/svg/IceCream";
+import IceCream from "../../assets/svg/IceCream";
 import classes from "./style/footer.module.scss";
-import { RegularMedium, RegularSemiBold } from "@/assets/Fonts/fonts";
+import { RegularMedium, RegularSemiBold } from "../../assets/Fonts/fonts";
 import { college, footerImageOne, chatri } from "../../assets/Linkage";
 
 const Footer = () => {

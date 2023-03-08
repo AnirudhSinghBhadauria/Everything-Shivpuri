@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./style/footerCard.module.scss";
-import { RegularSemiBold, Regular } from "@/assets/Fonts/fonts";
-import IceCream from "@/assets/svg/IceCream";
+import { RegularSemiBold, Regular } from "../../assets/Fonts/fonts";
+import IceCream from "../../assets/svg/IceCream";
 import CardLink from "../Helper/CardLink";
 
 const FooterCard = (props) => {

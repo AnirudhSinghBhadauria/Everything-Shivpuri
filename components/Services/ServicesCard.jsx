@@ -1,5 +1,5 @@
-import { RegularBold, RegularMedium } from "@/assets/Fonts/fonts";
-import IceCream from "@/assets/svg/IceCream";
+import { RegularBold, RegularMedium } from "../../assets/Fonts/fonts";
+import IceCream from "../../assets/svg/IceCream";
 import React from "react";
 import ButtonLink from "../Helper/ButtonLink";
 import classes from "../Services/style/servicesCard.module.scss";

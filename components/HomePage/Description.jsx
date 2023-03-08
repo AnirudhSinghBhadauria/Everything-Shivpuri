@@ -1,4 +1,4 @@
-import { Regular, RegularMedium } from "@/assets/Fonts/fonts";
+import { Regular, RegularMedium } from "./../../assets/Fonts/fonts";
 import React from "react";
 import ButtonLink from "../Helper/ButtonLink";
 import classes from "./style/description.module.scss";

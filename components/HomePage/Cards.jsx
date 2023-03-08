@@ -1,8 +1,12 @@
 import React from "react";
+import {
+  RegularBold,
+  RegularMedium,
+  RegularSemiBold,
+} from "../../assets/Fonts/fonts";
 import classes from "./style/cards.module.scss";
-import { RegularBold, RegularMedium, RegularSemiBold } from "@/assets/Fonts/fonts";
+import IceCream from "../../assets/svg/IceCream";
 import ButtonLink from "../Helper/ButtonLink";
-import IceCream from "@/assets/svg/IceCream";
 
 const Cards = (props) => {
   return (

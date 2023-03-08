@@ -1,6 +1,6 @@
-import { getData } from "@/lib/getData";
 import React from "react";
-import DisplayServices from "@/components/Services/DisplayServices";
+import { getData } from "../../../lib/getData";
+import DisplayServices from "../../../components/Services/DisplayServices";
 
 const Service = ({ service }) => {
   const {Data, Error} = service;

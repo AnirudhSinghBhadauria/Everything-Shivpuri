@@ -6,11 +6,11 @@ import {
   RegularBold,
   RegularMedium,
   RegularSemiBold,
-} from "@/assets/Fonts/fonts";
-import IceCream from "@/assets/svg/IceCream";
+} from "../../assets/Fonts/fonts";
+import IceCream from "../../assets/svg/IceCream";
+import ES from "../../assets/svg/ES";
 import ButtonLink from "../Helper/ButtonLink";
 import Image from "next/image";
-import ES from "@/assets/svg/ES";
 import LineCard from "./LineCard";
 import {
   avtar1,
@@ -19,7 +19,7 @@ import {
   homeChatri,
   NOBG,
   weather,
-} from "@/assets/Linkage";
+} from "../../assets/Linkage";
 
 const Hero = () => {
   return (
@@ -92,7 +92,10 @@ const Hero = () => {
               >
                 Weather Forecast
               </ButtonLink>
-                <h1 className={Regular.className}>{`${"30"}`}<sup>.</sup></h1>
+              <h1 className={Regular.className}>
+                {`${"30"}`}
+                <sup>.</sup>
+              </h1>
             </section>
 
             <section>
