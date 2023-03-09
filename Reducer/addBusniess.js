@@ -1,11 +1,11 @@
 export const INITIAL_STATE = {
   name: "NAME GOES HERE",
-  phone: "PHONE NUMBER OF BUSNIESS",
+  phone: "#",
   location: "",
   category: "YOUR CATEGORY",
   imgStatus: false,
   curruntPath: "",
-  back: "",
+  back: "white",
 
   imgName: "",
   imgSize: "",

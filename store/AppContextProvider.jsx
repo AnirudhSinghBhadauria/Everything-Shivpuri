@@ -6,11 +6,11 @@ export const appContext = createContext();
 const AppContextProvider = (props) => {
   const [state, dispatch] = useReducer(appReducer, INITIAL_STATE);
 
-  const { copied } = state;
+  const { message } = state;
 
-  const copyHandeler = (input) => dispatch({ type: "COPIED", payload: input });
+  const messageHandeler = (input) => dispatch({ type: "MESSAGE", payload: input });
 
-  const value = { copied: copied, copyHandeler: copyHandeler };
+  const value = { message: message, messageHandeler: messageHandeler };
 
   return (
     <appContext.Provider value={value}>{props.children}</appContext.Provider>

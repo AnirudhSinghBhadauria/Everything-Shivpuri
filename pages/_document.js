@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <div id='error-modal'></div>
+        <div id='message-modal'></div>
         <Main />
         <NextScript />
       </body>

@@ -1,11 +1,13 @@
 import ServicesCard from "../components/Services/ServicesCard";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
-import React, { useReducer, useState } from "react";
+import React, { useContext, useReducer, useState } from "react";
 import { db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import classes from "../styles/busniess.module.scss";
 import { busniessReducer, INITIAL_STATE } from "../Reducer/addBusniess";
 import { options } from "../lib/getData";
+import { appContext } from "store/AppContextProvider";
+import { useRouter } from "next/router";
 
 const formatFileSize = function (bytes) {
   const sufixes = ["B", "kB", "MB", "GB", "TB"];
@@ -14,8 +16,9 @@ const formatFileSize = function (bytes) {
 };
 
 const AddYourBusniess = () => {
+  const { push } = useRouter();
+  const { messageHandeler } = useContext(appContext);
   const [state, dispatch] = useReducer(busniessReducer, INITIAL_STATE);
-
   const {
     name,
     phone,
@@ -27,6 +30,8 @@ const AddYourBusniess = () => {
     imgName,
     file,
     disabled,
+    curruntPath,
+    back,
   } = state;
 
   const nameHandeler = (event) =>
@@ -37,23 +42,24 @@ const AddYourBusniess = () => {
     dispatch({ type: "PHONE", payload: event.target.value });
 
   const categoryHandeler = (event) => {
-    dispatch({ type: "CAT", payload: event.target.value });
+    let cat = event.target.value;
+    dispatch({ type: "CAT", payload: cat });
 
     if (
-      category === "Religious" ||
-      category === "HealthCare" ||
-      category === "Banks" ||
-      category === "Education" ||
-      category === "Emergency"
+      cat === "Religious" ||
+      cat === "HealthCare" ||
+      cat === "Banks" ||
+      cat === "Education" ||
+      cat === "Emergency"
     ) {
       dispatch({ type: "BACK", payload: "white" });
       dispatch({ type: "PATH", payload: "Genral" });
     } else if (
-      category === "Hotels" ||
-      category === "FoodCafe" ||
-      category === "Tourist" ||
-      category === "Theatres" ||
-      category === "Supermarkets"
+      cat === "Hotels" ||
+      cat === "FoodCafe" ||
+      cat === "Tourist" ||
+      cat === "Theatres" ||
+      cat === "Travel"
     ) {
       dispatch({ type: "BACK", payload: "#e1f2fc" });
       dispatch({ type: "PATH", payload: "Tourist" });
@@ -84,54 +90,158 @@ const AddYourBusniess = () => {
 
           if (width === 384 || height === 216) {
             if ((imageSIZE / 1023).toFixed(2) <= 100) {
-              console.log("IMAGE IS OK");
               dispatch({ type: "IMG-STATUS", payload: true });
+              dispatch({ type: "DISS", payload: false });
             } else {
               //----ERROR
               const fileSize = formatFileSize(imageSIZE);
-              console.log(`invalid image size, your image size is ${fileSize}`);
+              messageHandeler({
+                value: `Invalid image, your image size is ${fileSize}`,
+                status: "error",
+              });
+              dispatch({ type: "DISS", payload: false });
+
+              return;
             }
           } else {
             // ----ERROR
-            console.log(
-              `invalid image dimensions, Your image dimensions are ${width} X ${height}`
-            );
+            messageHandeler({
+              value: `Invalid image, Your image dimensions are ${width} X ${height}`,
+              status: "error",
+            });
+            dispatch({ type: "DISS", payload: false });
+
+            return;
           }
         };
       };
     }
   };
 
-  const submitHandeler = (event) => {
-    event.preventDefault();
-    let URL;
+  const sendDataToBackend = async (data) => {
+    const {
+      name,
+      phone,
+      location,
+      back,
+      imgName,
+      file,
+      category,
+      curruntPath,
+    } = data;
 
-    if (name === "NAME GOES HERE" || name.trim("").length < 3) {
-      //----ERROR
-      return;
-    } else if (
-      phone === "PHONE NUMEBR OF BUSNIESS" ||
-      phone.trim("").length < 10 ||
-      phone.trim("").length > 15
-    ) {
-      //----ERROR
-      return;
-    } else if (location === "") {
+    try {
+      messageHandeler({ value: "Uploading Image.", status: "loading" });
+
+      const storageRef = ref(storage, `${imgName}`);
+
+      const uploadTask = uploadBytesResumable(storageRef, file);
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          const progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log("Upload is " + progress + "% done");
+        },
+        (error) => {
+          //----ERROR
+          messageHandeler({ value: "Image Upload Failed.", status: "error" });
+          dispatch({ type: "DISS", payload: false });
+
+          return;
+        },
+        () => {
+          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+            let fragmentedData = {
+              id: name,
+              name: name,
+              location: location,
+              phone: phone,
+              curruntPath: curruntPath,
+              img: downloadURL,
+              back: back,
+            };
+
+            addDataToFirestrore(fragmentedData);
+          });
+        }
+      );
+    } catch (error) {
       // ----ERROR
-      return;
-    } else if (category === "default") {
-      // ----ERROR
+      messageHandeler({ value: "Image Upload Failed.", status: "error" });
+      dispatch({ type: "DISS", payload: false });
+
       return;
     }
 
-    console.log({
+    const addDataToFirestrore = async (data) => {
+      try {
+        messageHandeler({ value: "Sending data.", status: "loading" });
+
+        const imageRef = doc(db, curruntPath, category);
+        await updateDoc(imageRef, {
+          array: arrayUnion(data),
+        });
+
+        push(`/${curruntPath}/${category}`);
+        messageHandeler({ value: "Added successfully.", status: "success" });
+        dispatch({ type: "DISS", payload: false });
+      } catch (error) {
+        //----ERROR
+        messageHandeler({ value: "Error Sending Data", status: "error" });
+        dispatch({ type: "DISS", payload: false });
+
+        return;
+      }
+    };
+  };
+
+  const submitHandeler = (event) => {
+    event.preventDefault();
+    dispatch({ type: "DISS", payload: true });
+
+    if (name === "NAME GOES HERE" || name.trim("").length < 3) {
+      //----ERROR
+      messageHandeler({ value: "Name is invalid.", status: "error" });
+      dispatch({ type: "DISS", payload: false });
+
+      return;
+    } else if (
+      phone === "PHONE NUMEBR OF BUSNIESS" ||
+      phone.toString().trim("").length < 10 ||
+      phone.toString().trim("").length > 15
+    ) {
+      //----ERROR
+      messageHandeler({ value: "Phone number is invalid.", status: "error" });
+      dispatch({ type: "DISS", payload: false });
+
+      return;
+    } else if (location === "" || location.trim().length < 20) {
+      // ----ERROR
+      messageHandeler({ value: "Location is invalid.", status: "error" });
+      dispatch({ type: "DISS", payload: false });
+
+      return;
+    } else if (category === "default" || category === "") {
+      // ----ERROR
+      messageHandeler({ value: "Select category.", status: "error" });
+      dispatch({ type: "DISS", payload: false });
+
+      return;
+    }
+
+    let data = {
       name: name,
       location: location,
       phone: phone,
       category: category,
       imgName: imgName,
-      // file: file,
-    });
+      curruntPath: curruntPath,
+      back: back,
+      file: file,
+    };
+
+    sendDataToBackend(data);
   };
 
   name === "" && dispatch({ type: "NAME", payload: "NAME GOES HERE" });
@@ -143,10 +253,10 @@ const AddYourBusniess = () => {
         name={name}
         src={imgSrc}
         id={name}
-        back={"white"}
-        href={``}
+        back={back}
         phone={phone}
         location={location}
+        href={``}
       />
 
       <form onSubmit={submitHandeler}>
@@ -154,8 +264,8 @@ const AddYourBusniess = () => {
         <input onChange={imageHandeler} id="picture" type="file" required />
 
         <input onChange={nameHandeler} type="text" maxLength="17" required />
-        <input onChange={locHandeler} type="text" minLength="20" required />
-        <input onChange={phoneHandeler} type="text" maxLength="15" required />
+        <input onChange={locHandeler} type="text" required />
+        <input onChange={phoneHandeler} type="number" maxLength="15" required />
 
         <select
           onChange={categoryHandeler}
@@ -170,8 +280,8 @@ const AddYourBusniess = () => {
           ))}
         </select>
 
-        <button disabled={!imgStatus} type="submit">
-          submit
+        <button disabled={disabled} type="submit">
+          Add Busniess
         </button>
       </form>
     </section>
@@ -179,40 +289,3 @@ const AddYourBusniess = () => {
 };
 
 export default AddYourBusniess;
-
-//---------------------uploadImage logic:
-
-// if ((event.target.files[0].size / 1023).toFixed(2) <= 100) {
-//   const storageRef = ref(storage, `${event.target.files[0].name}`);
-
-//   const uploadTask = uploadBytesResumable(
-//     storageRef,
-//     event.target.files[0]
-//   );
-//   uploadTask.on(
-//     "state_changed",
-//     (snapshot) => {
-//       const progress =
-//         (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-//       console.log("Upload is " + progress + "% done");
-//     },
-//     (error) => {
-//       // Handle unsuccessful uploads
-//     },
-//     () => {
-//       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-//         console.log(downloadURL);
-//       });
-//     }
-//   );
-// }
-
-// ------------------append data to Array in firestore logic
-
-// const addMap = async () => {
-//   const washingtonRef = doc(db, "test", "test");
-
-//   await updateDoc(washingtonRef, {
-//     array: arrayUnion({ name: "GREATER2", id: "greater2" }),
-//   });
-// };

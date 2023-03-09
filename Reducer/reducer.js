@@ -1,13 +1,16 @@
 export const INITIAL_STATE = {
-  copied: false,
+  message: {
+    value: "",
+    status: "",
+  },
 };
 
 export const appReducer = (state, action) => {
   switch (action.type) {
-    case "COPIED":
+    case "MESSAGE":
       return {
         ...state,
-        copied: action.payload,
+        message: action.payload,
       };
   }
 };
