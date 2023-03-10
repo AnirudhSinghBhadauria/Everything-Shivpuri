@@ -18,3 +18,8 @@ export const homeChatri = "https://firebasestorage.googleapis.com/v0/b/everythin
 export const NOBG = 'https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/NONBGC.webp?alt=media&token=7010910d-5955-428c-878d-12c39f9642bc'
 
 export const weather = 'https://www.timeanddate.com/weather/india/shivpuri/ext';
+
+
+// AddBusniess-------------------------------------------------------
+
+export const es = 'https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fchoose%20your%20image.webp?alt=media&token=866af3fb-7f0f-4720-b59f-5dfa3fcf1038'

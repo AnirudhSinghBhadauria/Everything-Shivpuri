@@ -6,6 +6,9 @@
   margin: 0;
   padding: 0;
 }
+*:focus{
+  outline: 0;
+}
 
 html {
   line-height: 1.15;

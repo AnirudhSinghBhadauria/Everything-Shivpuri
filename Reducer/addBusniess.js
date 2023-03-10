@@ -1,3 +1,5 @@
+import { es } from "assets/Linkage";
+
 export const INITIAL_STATE = {
   name: "NAME GOES HERE",
   phone: "#",
@@ -9,7 +11,7 @@ export const INITIAL_STATE = {
 
   imgName: "",
   imgSize: "",
-  imgSrc: "",
+  imgSrc: es,
   width: "",
   height: "",
   category: "",

@@ -5,21 +5,71 @@
   width: 100%;
   padding: 1rem 1rem;
   border-radius: 1rem;
-  
-  form{
-       @include flex(column, space-evenly, center);
-       gap: 1rem;
-       background-color: white;
-       padding: 1rem;
-       border-radius: 1rem;
 
-       input:nth-of-type(1){
-          display: none;
-       }
-       label{
-          color: white;
-          padding: 0.25rem 0.8rem;
-          background-color: #3B3B3B;
-       }
+  form {
+    @include flex(column, space-evenly, center);
+    gap: 1.5rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+
+    div {
+      width: 100%;
+      p {
+        width: 100%;
+        color: black;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.75rem 0.75rem;
+        border-radius: 0.5rem;
+        border: 0;
+        background-color: #ecf2ff;
+        //   border: 1px solid #00000033;
+        color: black;
+
+        &:focus {
+          outline: 2px solid $primary-skyblue;
+        }
+      }
+    }
+
+    label {
+      @include flex(row, space-evenly, center);
+      gap: 1rem;
+      color: #000000;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      background-color: $primary-skyblue;
+    }
+
+    .selectContainer {
+      @include flex(row, space-evenly, center);
+      gap: 1rem;
+
+      select {
+        padding: 0.75rem 1rem;
+        color: #000000;
+        border-radius: 0.5rem;
+        background-color: #ecf2ff;
+        border: 0;
+        //   border: 1px solid #00000033;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: $primary-skyblue;
+      border-radius: 0.5rem;
+      color: white;
+    }
+
+    .imageInput {
+      display: none;
+    }
   }
 }

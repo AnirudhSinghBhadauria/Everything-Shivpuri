@@ -8,6 +8,10 @@ import { busniessReducer, INITIAL_STATE } from "../Reducer/addBusniess";
 import { options } from "../lib/getData";
 import { appContext } from "store/AppContextProvider";
 import { useRouter } from "next/router";
+import { es } from "assets/Linkage";
+import NoImg from "assets/svg/NoImg";
+import Img from "assets/svg/Img";
+import { RegularMedium, RegularSemiBold } from "assets/Fonts/fonts";
 
 const formatFileSize = function (bytes) {
   const sufixes = ["B", "kB", "MB", "GB", "TB"];
@@ -24,7 +28,6 @@ const AddYourBusniess = () => {
     phone,
     location,
     category,
-    imgSize,
     imgSrc,
     imgStatus,
     imgName,
@@ -46,6 +49,7 @@ const AddYourBusniess = () => {
     dispatch({ type: "CAT", payload: cat });
 
     if (
+      cat === "default" ||
       cat === "Religious" ||
       cat === "HealthCare" ||
       cat === "Banks" ||
@@ -245,7 +249,7 @@ const AddYourBusniess = () => {
   };
 
   name === "" && dispatch({ type: "NAME", payload: "NAME GOES HERE" });
-  // imgSrc === "" && dispatch({ type: "IMG-SRC", payload: "" });
+  imgSrc === "" && dispatch({ type: "IMG-SRC", payload: es });
 
   return (
     <section className={classes.container}>
@@ -260,27 +264,52 @@ const AddYourBusniess = () => {
       />
 
       <form onSubmit={submitHandeler}>
-        <label htmlFor="picture">Choose Display Picture</label>
-        <input onChange={imageHandeler} id="picture" type="file" required />
+        <input className={classes.imageInput} onChange={imageHandeler} id="picture" type="file" required />
+            
+        <div className={RegularMedium.className}>
+          <p>Name</p>
+          <input
+            onChange={nameHandeler}
+            type="text"
+            maxLength="20"
+            required
+          />
+        </div>
 
-        <input onChange={nameHandeler} type="text" maxLength="17" required />
-        <input onChange={locHandeler} type="text" required />
-        <input onChange={phoneHandeler} type="number" maxLength="15" required />
+        <div className={RegularMedium.className}>
+          <p>Location</p>
+          <input onChange={locHandeler} type="text" required />
+        </div>
 
-        <select
-          onChange={categoryHandeler}
-          name="category"
-          id="category"
-          required
-        >
-          {options.map(({ value, input }) => (
-            <option key={value} value={value}>
-              {input}
-            </option>
-          ))}
-        </select>
+        <div className={RegularMedium.className}>
+          <p>Phone</p>
+          <input
+            onChange={phoneHandeler}
+            type="number"
+            maxLength="15"
+            required
+          />
+        </div>
 
-        <button disabled={disabled} type="submit">
+        <div className={classes.selectContainer}>
+          <select
+            onChange={categoryHandeler}
+            name="category"
+            id="category"
+            required
+          >
+            {options.map(({ value, input }) => (
+              <option key={value} value={value}>
+                {input}
+              </option>
+            ))}
+          </select>
+          <label htmlFor="picture">
+            Choose Image {imgStatus ? <Img /> : <NoImg />}
+          </label>
+        </div>
+
+        <button className={RegularSemiBold.className} disabled={disabled} type="submit">
           Add Busniess
         </button>
       </form>
