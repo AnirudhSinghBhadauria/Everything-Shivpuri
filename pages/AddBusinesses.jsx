@@ -1,17 +1,24 @@
+import {
+  RegularBold,
+  RegularMedium,
+  RegularSemiBold,
+} from "assets/Fonts/fonts";
+import Image from "next/image";
+import ES from "assets/svg/ES";
+import Img from "assets/svg/Img";
+import NoImg from "assets/svg/NoImg";
+import { useRouter } from "next/router";
+import { options } from "../lib/getData";
+import { db, storage } from "../firebase";
+import { es, stars } from "assets/Linkage";
+import classes from "../styles/busniess.module.scss";
+import { appContext } from "store/AppContextProvider";
+import BusniessText from "components/Busniess/BusniessText";
 import ServicesCard from "../components/Services/ServicesCard";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
-import React, { useContext, useReducer, useState } from "react";
-import { db, storage } from "../firebase";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import classes from "../styles/busniess.module.scss";
+import React, { useContext, useReducer, Fragment } from "react";
 import { busniessReducer, INITIAL_STATE } from "../Reducer/addBusniess";
-import { options } from "../lib/getData";
-import { appContext } from "store/AppContextProvider";
-import { useRouter } from "next/router";
-import { es } from "assets/Linkage";
-import NoImg from "assets/svg/NoImg";
-import Img from "assets/svg/Img";
-import { RegularMedium, RegularSemiBold } from "assets/Fonts/fonts";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 const formatFileSize = function (bytes) {
   const sufixes = ["B", "kB", "MB", "GB", "TB"];
@@ -252,68 +259,120 @@ const AddYourBusniess = () => {
   imgSrc === "" && dispatch({ type: "IMG-SRC", payload: es });
 
   return (
-    <section className={classes.container}>
-      <ServicesCard
-        name={name}
-        src={imgSrc}
-        id={name}
-        back={back}
-        phone={phone}
-        location={location}
-        href={``}
-      />
+    <Fragment>
+      <BusniessText />
 
-      <form onSubmit={submitHandeler}>
-        <input className={classes.imageInput} onChange={imageHandeler} id="picture" type="file" required />
-            
-        <div className={RegularMedium.className}>
-          <p>Name</p>
+      <section className={classes.container}>
+        <div className={classes.left}>
+          <ServicesCard
+            name={name}
+            src={imgSrc}
+            id={name}
+            back={back}
+            phone={phone}
+            location={location}
+            href={``}
+            className={classes.card}
+          />
+          <section className={classes.bottomCard}>
+            <p className={RegularMedium.className}>
+              Promote products & services to our audience.
+            </p>
+            <h2 className={RegularBold.className}>JOIN & GROW</h2>
+
+            <Image width="84" height="80" src={stars} alt="asset" />
+          </section>
+        </div>
+
+        <form onSubmit={submitHandeler}>
+          <ES className={classes.es} fill="black" />
+          <h2 className={RegularBold.className}>Add your business.</h2>
+
           <input
-            onChange={nameHandeler}
-            type="text"
-            maxLength="20"
+            className={classes.imageInput}
+            onChange={imageHandeler}
+            id="picture"
+            type="file"
             required
           />
-        </div>
 
-        <div className={RegularMedium.className}>
-          <p>Location</p>
-          <input onChange={locHandeler} type="text" required />
-        </div>
+          <div className={`${RegularSemiBold.className} ${classes.group}`}>
+            <input
+              id="name"
+              onChange={nameHandeler}
+              type="text"
+              maxLength="20"
+              autoComplete="off"
+              required
+            />
+            <label className={`${classes.label}`} htmlFor="name">
+              Name
+            </label>
+          </div>
 
-        <div className={RegularMedium.className}>
-          <p>Phone</p>
-          <input
-            onChange={phoneHandeler}
-            type="number"
-            maxLength="15"
-            required
-          />
-        </div>
+          <div className={`${RegularSemiBold.className} ${classes.group}`}>
+            <input
+              onChange={locHandeler}
+              type="text"
+              id="Location"
+              autoComplete="off"
+              required
+            />
+            <label className={classes.label} htmlFor="Location">
+              Location
+            </label>
+          </div>
 
-        <div className={classes.selectContainer}>
-          <select
-            onChange={categoryHandeler}
-            name="category"
-            id="category"
-            required
+          <div className={`${RegularSemiBold.className} ${classes.group}`}>
+            <input
+              htmlFor="phone"
+              onChange={phoneHandeler}
+              type="number"
+              maxLength="15"
+              autoComplete="off"
+              required
+            ></input>
+            <label id="phone" className={classes.label} htmlFor="phone">
+              Phone
+            </label>
+          </div>
+
+          <div className={classes.selectContainer}>
+            <select
+              className={RegularSemiBold.className}
+              onChange={categoryHandeler}
+              name="category"
+              id="category"
+              required
+            >
+              {options.map(({ value, input }) => (
+                <option
+                  className={RegularMedium.className}
+                  key={value}
+                  value={value}
+                >
+                  {input}
+                </option>
+              ))}
+            </select>
+            <label
+              className={`${classes.imgLabel} ${RegularSemiBold.className}`}
+              htmlFor="picture"
+            >
+              Choose Image {imgStatus ? <Img /> : <NoImg />}
+            </label>
+          </div>
+
+          <button
+            className={RegularSemiBold.className}
+            disabled={disabled}
+            type="submit"
           >
-            {options.map(({ value, input }) => (
-              <option key={value} value={value}>
-                {input}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="picture">
-            Choose Image {imgStatus ? <Img /> : <NoImg />}
-          </label>
-        </div>
-
-        <button className={RegularSemiBold.className} disabled={disabled} type="submit">
-          Add Busniess
-        </button>
-      </form>
-    </section>
+            Add Busniess
+          </button>
+        </form>
+      </section>
+    </Fragment>
   );
 };
 

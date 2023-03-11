@@ -1,49 +1,127 @@
 @import "../assets/base.scss";
 
 .container {
-  @include flex(row, space-evenly, center);
+  @include flex(row, space-evenly, flex-start);
   width: 100%;
-  padding: 1rem 1rem;
   border-radius: 1rem;
+  gap: 1rem;
+
+  .left {
+    @include flex(column, space-evenly, center);
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+
+    .card {
+      border: 1.5px solid #0000001a;
+    }
+    .bottomCard {
+      @include flex(column, flex-end, flex-start);
+      width: 95%;
+      height: 13rem;
+      background-color: $primary-purple;
+      color: black;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 1rem;
+      }
+      img:nth-of-type(1) {
+        left: 1.5rem;
+      }
+      img:nth-of-type(2) {
+        right: 1.5rem;
+        transform: rotate(180deg);
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
 
   form {
     @include flex(column, space-evenly, center);
     gap: 1.5rem;
     background-color: white;
-    padding: 1rem;
+    padding: 3rem 4rem;
     border-radius: 0.75rem;
 
-    div {
+    .es {
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      color: rgb(0, 0, 0);
+      font-size: 1.75rem;
       width: 100%;
-      p {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    .group {
+      width: 100%;
+      position: relative;
+
+      .label {
+        position: absolute;
         width: 100%;
-        color: black;
+        color: #00000079;
         font-size: 0.9rem;
-        margin-bottom: 0.5rem;
+        cursor: text;
+        pointer-events: none;
+        top: 1.2rem;
+        left: 1rem;
+        transition: all 100ms linear;
       }
 
       input {
         width: 100%;
-        padding: 0.75rem 0.75rem;
+        padding: 1.75rem 0.75rem 0.5rem 0.75rem;
         border-radius: 0.5rem;
         border: 0;
-        background-color: #ecf2ff;
-        //   border: 1px solid #00000033;
+        background-color: white;
+        border: 1.5px solid #0000001a;
         color: black;
 
         &:focus {
-          outline: 2px solid $primary-skyblue;
+          outline: 1.5px solid $primary-purple;
+          border: 1.5px solid #00000000;
+          box-shadow: hsla(262, 97%, 76%, 0.289) 0px 4px 6px -1px,
+            hsla(262, 97%, 76%, 0.185) 0px 2px 4px -1px;
         }
+      }
+
+      input:focus ~ .label,
+      input:not(:focus):valid ~ .label {
+        color: #843dff;
+        font-size: 0.75rem;
+        top: 0.4rem;
+        left: 0.4rem;
       }
     }
 
-    label {
+    .imgLabel {
       @include flex(row, space-evenly, center);
       gap: 1rem;
       color: #000000;
       padding: 0.75rem 1rem;
       border-radius: 0.5rem;
-      background-color: $primary-skyblue;
+      border: 1.5px solid #0000001a;
+      background-color: $primary-purple;
+      transition: background-color 200ms ease-in-out;
+
+      &:hover {
+        background-color: hsla(262, 97%, 76%, 0.95);
+        cursor: pointer;
+      }
     }
 
     .selectContainer {
@@ -52,20 +130,31 @@
 
       select {
         padding: 0.75rem 1rem;
-        color: #000000;
+        color: #00000081;
         border-radius: 0.5rem;
-        background-color: #ecf2ff;
+        background-color: white;
         border: 0;
-        //   border: 1px solid #00000033;
+        border: 1.5px solid #0000001a;
+
+        option {
+          color: black;
+          text-align: left;
+        }
+
+        &:focus {
+          outline: 1.5px solid $primary-purple;
+          border: 1.5px solid #00000000;
+        }
       }
     }
 
     button {
       width: 100%;
       padding: 0.75rem;
-      background-color: $primary-skyblue;
-      border-radius: 0.5rem;
+      border-radius: 4rem;
+      background-color: black;
       color: white;
+      cursor: pointer;
     }
 
     .imageInput {

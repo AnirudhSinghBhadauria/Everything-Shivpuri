@@ -68,8 +68,13 @@ const ServicesCard = (props) => {
     );
   }
 
+  let className = `${classes.card} ${props.className ? props.className : ""}`;
+
   return (
-    <div style={{ backgroundColor: props.back }} className={classes.card}>
+    <div
+      style={{ backgroundColor: props.back }}
+      className={className}
+    >
       <section className={classes.imageContainer}>
         <Image src={props.src} fill alt={props.id} />
       </section>

@@ -27,7 +27,6 @@ const ES = (props) => {
         transform="rotate(-90 0 17)"
         fill={props.fill}
       />
-      <circle cx="15" cy="16" r="1" fill={props.fill} />
     </svg>
   );
 };
