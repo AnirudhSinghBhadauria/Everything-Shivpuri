@@ -27,7 +27,7 @@ export const weather = "https://www.timeanddate.com/weather/india/shivpuri/ext";
 // AddBusniess-------------------------------------------------------
 
 export const es =
-  "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fchoose%20your%20image.webp?alt=media&token=866af3fb-7f0f-4720-b59f-5dfa3fcf1038";
+  "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fchoose%20image%20v2.webp?alt=media&token=041fe29f-aaa5-4695-82be-4bd148e3ee9b";
 
 // addBusniess-------------------------------------------------------
 
@@ -35,4 +35,10 @@ export const arrow =
   "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Farrow.png?alt=media&token=72076ca4-fb00-48e1-8cdb-c6ee579f646d";
 
 export const stars =
-  "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fstars.png?alt=media&token=1fdb4f58-e2cd-4eed-b1dd-95c7b21bdd52";
+  "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fstars.webp?alt=media&token=7c8aaa66-de41-4035-b78c-350330f02c5a";
+
+export const curlyLines =
+  "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fcurly%20lines.webp?alt=media&token=c4acb0aa-829d-44fc-9f2f-4c92bbe7f922";
+
+export const smily =
+  "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fgreen%20smily.webp?alt=media&token=eaf0c09b-dbd6-423e-bdf4-b8797389bbd0";

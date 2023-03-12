@@ -3,7 +3,6 @@ import {
   RegularMedium,
   RegularSemiBold,
 } from "assets/Fonts/fonts";
-import Image from "next/image";
 import ES from "assets/svg/ES";
 import Img from "assets/svg/Img";
 import NoImg from "assets/svg/NoImg";
@@ -19,6 +18,7 @@ import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import React, { useContext, useReducer, Fragment } from "react";
 import { busniessReducer, INITIAL_STATE } from "../Reducer/addBusniess";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import Terms from "components/Busniess/Terms";
 
 const formatFileSize = function (bytes) {
   const sufixes = ["B", "kB", "MB", "GB", "TB"];
@@ -272,7 +272,6 @@ const AddYourBusniess = () => {
             phone={phone}
             location={location}
             href={``}
-            className={classes.card}
           />
           <section className={classes.bottomCard}>
             <p className={RegularMedium.className}>
@@ -280,7 +279,7 @@ const AddYourBusniess = () => {
             </p>
             <h2 className={RegularBold.className}>JOIN & GROW</h2>
 
-            <Image width="84" height="80" src={stars} alt="asset" />
+            <img width="84" height="80" src={stars} alt="asset" />
           </section>
         </div>
 
@@ -372,6 +371,7 @@ const AddYourBusniess = () => {
           </button>
         </form>
       </section>
+      <Terms />
     </Fragment>
   );
 };

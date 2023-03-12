@@ -1,30 +1,56 @@
-@import '../../../assets/base.scss';
+@import "../../../assets/base.scss";
 
-.container{
-     padding: 1rem 2rem;
-     margin-bottom: 1.75rem;
-     color: black;
+.container {
+  padding: 1rem 2rem;
+  margin-bottom: 1.75rem;
+  color: black;
 
-     div{
-          @include flex(column, space-evenly, flex-start);
-          background-color: white;
-          border: 4px solid black;
-          border-radius: 1rem;
-          padding: 1.5rem 4rem;
-          gap: 1rem;
+  div {
+    @include flex(column, space-evenly, flex-start);
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 1rem;
+    padding: 1.5rem 4rem;
+    gap: 1rem;
 
-          h1{
-               font-size: 3rem;
-               margin-bottom: 0.5rem;
-          }
-          p{
-               font-size: 1.1rem;
-               max-width: 90%;
-               line-height: 1.35rem;
-          }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+      max-width: 90%;
+      line-height: 1.35rem;
+    }
 
-          svg{
-               margin-bottom: 0.5rem;
-          }
-     }
+    svg {
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 5rem;
+      padding-top: 1.5rem;
+
+      li {
+        max-width: 80%;
+        margin-bottom: 1rem;
+        list-style: "✨";
+
+        p {
+          padding-left: 1rem;
+        }
+      }
+    }
+    .gradinetSection {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(
+        103deg,
+        rgb(235, 225, 188) 7.2%,
+        rgb(232, 188, 234) 57.5%,
+        rgb(203, 209, 244) 90.7%
+      );
+      border-radius: 0.5rem;
+    }
+  }
 }
