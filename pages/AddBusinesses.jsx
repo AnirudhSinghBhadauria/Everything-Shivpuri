@@ -63,7 +63,7 @@ const AddYourBusniess = () => {
       cat === "Education" ||
       cat === "Emergency"
     ) {
-      dispatch({ type: "BACK", payload: "white" });
+      dispatch({ type: "BACK", payload: "#F2F9FF" });
       dispatch({ type: "PATH", payload: "Genral" });
     } else if (
       cat === "Hotels" ||
@@ -72,10 +72,10 @@ const AddYourBusniess = () => {
       cat === "Theatres" ||
       cat === "Travel"
     ) {
-      dispatch({ type: "BACK", payload: "#e1f2fc" });
+      dispatch({ type: "BACK", payload: "#FFFAED" });
       dispatch({ type: "PATH", payload: "Tourist" });
     } else {
-      dispatch({ type: "BACK", payload: "#edf1d6" });
+      dispatch({ type: "BACK", payload: "#FFF2F2" });
       dispatch({ type: "PATH", payload: "Essentials" });
     }
   };

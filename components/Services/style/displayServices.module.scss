@@ -1,7 +1,9 @@
-@import '../../../assets/base.scss';
+@import "../../../assets/base.scss";
 
-.serviceContainer{
-     @include flex(row, center, center);
-     flex-wrap: wrap;
-     padding: 3rem 0rem;
+
+
+.serviceContainer {
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  padding: 3rem 0rem;
 }

@@ -4,22 +4,21 @@
   width: 24rem;
   //   width: clamp(14.25rem,28.5vw,28rem);
   height: 21rem;
-  border-radius: 0.575rem;
-
-
+  border-radius: 24px;
   overflow: hidden;
   color: transparent;
   margin: 1rem;
-    // padding: 0.1rem;
+  // padding: 0.1rem;
 
   .imageContainer {
     height: 13.5rem;
     width: 100%;
     position: relative;
     overflow: hidden;
-    outline: 1px solid #00000042;
-    // border-radius: 0.875rem;
-    
+    outline: 1px solid #0000001f;
+    border-radius: 24px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
     img {
       // border-radius: 0.875rem;
       border-bottom-left-radius: 0;
@@ -39,7 +38,7 @@
       h2 {
         font-size: 1.5rem;
         color: black;
-      }
+        }
       svg {
         transition: all 200ms linear;
       }
@@ -48,7 +47,8 @@
     .button {
       background-color: transparent;
       border-radius: 1rem;
-      color: black;
+      color: #000000;
+
       border: 1px solid black;
       padding: 0.5rem 1rem;
       font-size: 0.75rem;

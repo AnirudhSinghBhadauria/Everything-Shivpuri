@@ -76,8 +76,7 @@ const BusniessText = () => {
           users to find the businesses they need. Fill out the following form
           carefully.{" "}
           <strong>
-            Share all the required information in correct format and submit the
-            form.
+            Share all the required information in correct format and click on 'Add Business'.
           </strong>
         </p>
       </div>
