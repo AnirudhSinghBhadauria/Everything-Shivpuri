@@ -1,0 +1,31 @@
+@import "../../../assets/base.scss";
+
+.container {
+  @include flex(row, space-evenly, center);
+  width: 100%;
+  background-color: #a340fe;
+  border-radius: 1rem;
+
+  section {
+    @include flex(column, center, center);
+    gap: 2rem;
+
+    h2 {
+      font-size: clamp(1.25rem, 2.5vw, 2rem);
+      font-size: 2rem;
+      color: white;
+    }
+
+    .button {
+      background: #fbe729;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      color: black;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: #ffeb39e8;
+      }
+    }
+  }
+}

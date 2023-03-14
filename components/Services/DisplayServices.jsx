@@ -8,6 +8,7 @@ import {
   RegularSemiBold,
 } from "assets/Fonts/fonts";
 import IntroSection from "./IntroSection";
+import Didnt from "./Didnt";
 
 const DisplayServices = ({ services }) => {
   const { heading, color, desc, background } = services[0];
@@ -36,6 +37,8 @@ const DisplayServices = ({ services }) => {
           )
         )}
       </section>
+
+      <Didnt />
     </Fragment>
   );
 };

@@ -24,6 +24,9 @@ export const NOBG =
 
 export const weather = "https://www.timeanddate.com/weather/india/shivpuri/ext";
 
+export const social =
+  "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2FCongratulations.webp?alt=media&token=18c80592-3b6e-4646-a383-5ab6a63f12b6";
+
 // AddBusniess-------------------------------------------------------
 
 export const es =
@@ -42,3 +45,8 @@ export const curlyLines =
 
 export const smily =
   "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fgreen%20smily.webp?alt=media&token=eaf0c09b-dbd6-423e-bdf4-b8797389bbd0";
+
+// IntroSection-------------------------------------------------------
+
+export const didnt =
+  "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fdidnt.webp?alt=media&token=fae42e12-f765-47bd-b379-6fffccc61939";
