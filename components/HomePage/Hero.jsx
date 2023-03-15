@@ -46,10 +46,10 @@ const Hero = () => {
           </section>
         </div>
 
-        <ButtonLink href="/" label="Join" className={classes.joinButton}>
+        <a href="#community" label="Join" className={classes.joinButton}>
           <IceCream fill="black" />
           <p className={RegularBold.className}>JOIN COMMUNITY</p>
-        </ButtonLink>
+        </a>
       </section>
 
       <section className={classes.bottomSection}>

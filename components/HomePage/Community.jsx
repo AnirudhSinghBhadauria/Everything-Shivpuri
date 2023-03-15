@@ -14,7 +14,7 @@ const Community = () => {
   const instagram = "https://www.instagram.com/shivpurimpindia/?hl=en";
 
   return (
-    <div className={classes.container}>
+    <div id="community" className={classes.container}>
       <section>
         <h2 className={RegularSemiBold.className}>Join Your Community.</h2>
         <p className={RegularMedium.className}>
@@ -22,11 +22,11 @@ const Community = () => {
           with the latest news and events.
         </p>
         <div className={classes.socialMedia}>
-          <ButtonLink href={instagram} name="Instagram">
-            <Instagram />
-          </ButtonLink>
           <ButtonLink href={twitter} name="Twitter">
             <Twitter />
+          </ButtonLink>
+          <ButtonLink href={instagram} name="Instagram">
+            <Instagram />
           </ButtonLink>
           <ButtonLink href={facebook} name="Facebook">
             <Facebook />

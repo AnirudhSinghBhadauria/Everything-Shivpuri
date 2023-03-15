@@ -7,8 +7,6 @@ $primary-yellow: hsl(66, 100%, 72%);
 $primary-purple: hsl(262, 97%, 76%);
 $primary-neon: hsl(81, 85%, 60%);
 
-$earth: url("https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fearth%201.webp?alt=media&token=00bd2578-57b3-4b9c-8145-4f2fe8885cbe");
-
 @mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;

@@ -28,11 +28,11 @@ const TextContnet = () => {
         desc="Some Nice to know Essential Services everybody including Localites needs to know. This Section Includes Electronic Stores, Garment stores, Saloon and Supermarkets."
       />
       <Description
-        label="FEATURED"
-        path="/Featured"
-        main="FEATURED"
+        label="ADD BUSINESS"
+        path="/AddBusinesses"
+        main="ADD BUSS."
         secondary="C.XXI S.XXXII"
-        desc="Some Important Places we wanted to mention! This section Features two places UIT RGPV Shivpuri and Architectural Brilliance Chatri, more Details available in this section."
+        desc="Didn't Got what you were lookin for? Maybe we missed it, but don't worry you can add it yourself in Add Businesses section, just share details about place or busniess and thats it."
       />
     </section>
   );

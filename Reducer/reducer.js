@@ -3,6 +3,7 @@ export const INITIAL_STATE = {
     value: "",
     status: "",
   },
+  curruntUser: "",
 };
 
 export const appReducer = (state, action) => {
@@ -12,5 +13,12 @@ export const appReducer = (state, action) => {
         ...state,
         message: action.payload,
       };
+    case "USER":
+      return {
+        ...state,
+        curruntUser: action.payload,
+      };
+    default:
+      return state;
   }
 };

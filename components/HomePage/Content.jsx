@@ -2,16 +2,18 @@ import React from "react";
 import classes from "./style/content.module.scss";
 import Cards from "./Cards";
 import Image from "next/image";
+import Zigzag from "assets/svg/Zigzag";
+import Rings from "assets/svg/Rings";
 
 const Content = () => {
   return (
-    <section className={classes.wrapper}>
+    <section id="category" className={classes.wrapper}>
       <Cards
         title="GENRAL"
         href="/Genral"
         label="genral stuff"
         style={{
-          backgroundColor: "hsl(100, 100%, 100%)",
+          backgroundColor: "white",
           zIndex: 1,
           left: "2%",
           top: "17%",
@@ -23,7 +25,7 @@ const Content = () => {
         href="/Tourist"
         label="Tourist"
         style={{
-          backgroundColor: "hsl(211, 54%, 75%)",
+          backgroundColor: "hotpink",
           zIndex: 2,
           left: "16%",
           top: "26%",
@@ -37,7 +39,7 @@ const Content = () => {
       />
       <Cards
         title="COMMUNITY"
-        href="#"
+        href="#community"
         label="community"
         style={{
           backgroundColor: "hsl(262, 97%, 76%)",
@@ -57,6 +59,8 @@ const Content = () => {
           bottom: "17%",
         }}
       />
+      <Zigzag className={classes.zigzag} />
+      <Rings className={classes.rings} />
     </section>
   );
 };

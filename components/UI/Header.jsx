@@ -1,34 +1,51 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./style/header.module.scss";
-import {
-  Regular,
-  RegularMedium,
-  RegularSemiBold,
-} from "../../assets/Fonts/fonts";
+import { RegularMedium } from "../../assets/Fonts/fonts";
 import ES from "../../assets/svg/ES";
 import Mail from "../../assets/svg/Mail";
 import Link from "next/link";
+import Image from "next/image";
+import { appContext } from "store/AppContextProvider";
 
 const Header = () => {
+  const { signinWithGoogle } = useContext(appContext);
+
   return (
     <nav className={classes.navWrapper}>
-      <Link className={classes.ESContainer}  href="/">
+      <Link className={classes.ESContainer} href="/">
         <ES className={classes.ES} fill="white" />
       </Link>
 
       <section className={RegularMedium.className}>
-        <Link href="#">ABOUT</Link>
-        <Link href="#">CATEGORY</Link>
-        <Link href="#">GENRAL</Link>
-        <Link href="#">CONTACT</Link>
+        <Link href="/About" aria-label="ABOUT">
+          ABOUT
+        </Link>
+        <Link href="/Essentials" aria-label="Essentials">
+          ESSENTIALS
+        </Link>
+        <Link href="/Genral" aria-label="GENERAL">
+          GENERAL
+        </Link>
+        <Link href="/Contact" aria-label="CONTACT">
+          CONTACT
+        </Link>
       </section>
 
       <section>
-        <Link className={RegularMedium.className} href="#">
-          REACH
+        <Link
+          className={RegularMedium.className}
+          href="#"
+          onClick={signinWithGoogle}
+        >
+          LOGIN
         </Link>
+
+        {/* <div className={classes.displayPicture}>
+          <Image src='' width='40' height='40' alt='display-picture' />
+        </div> */}
+
         <div className={classes.line}></div>
-        <Link href="#" className={classes.mailWrapper}>
+        <Link href="/Contact" className={classes.mailWrapper}>
           <Mail />
         </Link>
       </section>
