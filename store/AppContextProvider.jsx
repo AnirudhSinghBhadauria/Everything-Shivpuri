@@ -5,8 +5,10 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 import { auth } from "../firebase";
+import Cookies from "js-cookie";
 
 export const appContext = createContext();
 
@@ -26,6 +28,7 @@ const AppContextProvider = (props) => {
       const credential = GoogleAuthProvider.credentialFromResult(response);
       const token = credential.accessToken;
       const user = response.user;
+      Cookies.set("isLoggedIn", true);
       messageHandeler({ status: "success", value: "Successfully Logged" });
     } catch (error) {
       messageHandeler({ value: `${error.message}`, status: "error" });
@@ -33,12 +36,26 @@ const AppContextProvider = (props) => {
     }
   };
 
+  const signOutGoogle = async () => {
+    try {
+      messageHandeler({ status: "loading", value: "Logging out" });
+      const signout = await signOut(auth);
+      Cookies.remove("isLoggedIn");
+      messageHandeler({ status: "success", value: "Logged out" });
+    } catch (error) {
+      messageHandeler({ status: "error", value: `${error.message}` });
+      return;
+    }
+  };
+
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
-        dispatch({ type: "USER", curruntUser: user });
+        dispatch({ type: "USER", payload: user });
+        console.log(user);
       } else {
+        dispatch({ type: "USER", payload: "" });
         console.log("NO-USER");
       }
     });
@@ -50,7 +67,15 @@ const AppContextProvider = (props) => {
     message: message,
     messageHandeler: messageHandeler,
     signinWithGoogle: signinWithGoogle,
+    curruntUser: curruntUser,
+    signOutGoogle: signOutGoogle,
   };
+
+  if (curruntUser) {
+    console.log(curruntUser.uid);
+  } else {
+    console.log("NO USER");
+  }
 
   return (
     <appContext.Provider value={value}>{props.children}</appContext.Provider>

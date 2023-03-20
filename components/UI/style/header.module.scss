@@ -68,11 +68,12 @@
       padding: 0.4rem;
       border-radius: 5rem;
     }
-
+    
     .displayPicture{
-      border-radius: 50%;
+      @include flex(row, center, center);
+      border-radius: 1rem;
+      border: 1px solid $primary-yellow;
       overflow: hidden;
-      border: 1px solid white;
     }
   }
 }

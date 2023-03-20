@@ -64,7 +64,7 @@
             color: #a8c7fa;
             border-bottom: 1px solid transparent;
 
-            &:hover{
+            &:hover {
               border-bottom: 1px solid #a8c7fa;
             }
           }
@@ -83,6 +83,18 @@
 
         &:hover {
           border-bottom: 1px solid #d0d0d0;
+        }
+      }
+
+      .logout {
+        border: 0;
+        background-color: transparent;
+        color: #E21818;
+        font-size: 0.875rem;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+          border-bottom: 1px solid #E21818;
         }
       }
     }

@@ -1,18 +1,16 @@
-import React from "react";
-import Image from "next/image";
+import { RegularMedium } from "../../assets/Fonts/fonts";
+import ButtonLink from "components/Helper/ButtonLink";
+import { appContext } from "store/AppContextProvider";
 import classes from "./style/footer.module.scss";
-import {
-  Regular,
-  RegularMedium,
-  RegularSemiBold,
-} from "../../assets/Fonts/fonts";
-import { college, footerImageOne, chatri } from "../../assets/Linkage";
+import React, { useContext, useEffect } from "react";
 import Wave from "assets/svg/Wave";
 import ES from "assets/svg/ES";
-import ButtonLink from "components/Helper/ButtonLink";
 import Link from "next/link";
 
 const Footer = () => {
+  const { signOutGoogle, curruntUser } = useContext(appContext);
+
+
   return (
     <footer className={classes.footer}>
       <Wave />
@@ -110,6 +108,14 @@ const Footer = () => {
           >
             Developer
           </Link>
+
+          {curruntUser ? (
+            <button className={`${classes.logout}`} onClick={signOutGoogle}>
+              Logout
+            </button>
+          ) : (
+            ""
+          )}
         </div>
       </section>
     </footer>

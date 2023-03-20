@@ -8,7 +8,9 @@ import Image from "next/image";
 import { appContext } from "store/AppContextProvider";
 
 const Header = () => {
-  const { signinWithGoogle } = useContext(appContext);
+  const { signinWithGoogle, curruntUser } = useContext(appContext);
+
+  const photoURL = curruntUser && curruntUser.photoURL;
 
   return (
     <nav className={classes.navWrapper}>
@@ -32,17 +34,24 @@ const Header = () => {
       </section>
 
       <section>
-        <Link
-          className={RegularMedium.className}
-          href="#"
-          onClick={signinWithGoogle}
-        >
-          LOGIN
-        </Link>
-
-        {/* <div className={classes.displayPicture}>
-          <Image src='' width='40' height='40' alt='display-picture' />
-        </div> */}
+        {!curruntUser ? (
+          <Link
+            className={RegularMedium.className}
+            href="#"
+            onClick={signinWithGoogle}
+          >
+            LOGIN
+          </Link>
+        ) : (
+          <div className={classes.displayPicture}>
+            <Image
+              src={photoURL}
+              width="30"
+              height="30"
+              alt="display-picture"
+            />
+          </div>
+        )}
 
         <div className={classes.line}></div>
         <Link href="/Contact" className={classes.mailWrapper}>
