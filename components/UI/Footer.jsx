@@ -8,8 +8,18 @@ import ES from "assets/svg/ES";
 import Link from "next/link";
 
 const Footer = () => {
-  const { signOutGoogle, curruntUser } = useContext(appContext);
+  const { signOutGoogle, curruntUser, signinWithGoogle } =
+    useContext(appContext);
 
+  let content = curruntUser ? (
+    <li>
+      <Link href="/AddBusinesses" aria-label="add-business">
+       business
+      </Link>
+    </li>
+  ) : (
+    <li onClick={signinWithGoogle}>Login</li>
+  );
 
   return (
     <footer className={classes.footer}>
@@ -49,11 +59,8 @@ const Footer = () => {
                   Essentials
                 </Link>
               </li>
-              <li>
-                <Link href="/AddBusinesses" aria-label="add-business">
-                  add business
-                </Link>
-              </li>
+
+              {content}
             </ul>
             <ul className={RegularMedium.className}>
               <li>

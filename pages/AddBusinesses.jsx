@@ -15,7 +15,7 @@ import { appContext } from "store/AppContextProvider";
 import BusniessText from "components/Busniess/BusniessText";
 import ServicesCard from "../components/Services/ServicesCard";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
-import React, { useContext, useReducer, Fragment } from "react";
+import React, { useContext, useReducer, Fragment, useEffect } from "react";
 import { busniessReducer, INITIAL_STATE } from "../Reducer/addBusniess";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import Terms from "components/Busniess/Terms";
@@ -28,7 +28,7 @@ const formatFileSize = function (bytes) {
 
 const AddYourBusniess = () => {
   const { push } = useRouter();
-  const { messageHandeler } = useContext(appContext);
+  const { messageHandeler, curruntUser } = useContext(appContext);
   const [state, dispatch] = useReducer(busniessReducer, INITIAL_STATE);
   const {
     name,
@@ -43,6 +43,12 @@ const AddYourBusniess = () => {
     curruntPath,
     back,
   } = state;
+
+  useEffect(() => {
+    if (!curruntUser) {
+      push("/");
+    }
+  }, [curruntUser]);
 
   const nameHandeler = (event) =>
     dispatch({ type: "NAME", payload: event.target.value.toUpperCase() });

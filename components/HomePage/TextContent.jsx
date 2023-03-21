@@ -6,6 +6,7 @@ const TextContnet = () => {
   return (
     <section className={classes.wrapper}>
       <Description
+        link
         label="GENRAL"
         path="/Genral"
         main="GENRAL"
@@ -14,6 +15,7 @@ const TextContnet = () => {
             Educational Institues, and other general things Exist in this section! "
       />
       <Description
+        link
         label="TOURIST"
         path="/Tourist"
         main="TOURIST?"
@@ -21,6 +23,7 @@ const TextContnet = () => {
         desc="Everything a Tourist who's coming for the first time Needs to know! From Hotels to Tourist Spots, Theaters, Traveling Coviniences and Food Outlets for you to enjoy."
       />
       <Description
+        link
         label="ESSENTIALS"
         path="/Essentials"
         main="ESSENTIALS"
@@ -32,7 +35,7 @@ const TextContnet = () => {
         path="/AddBusinesses"
         main="ADD BUSS."
         secondary="C.XXI S.XXXII"
-        desc="Didn't Got what you were lookin for? Maybe we missed it, but don't worry you can add it yourself in Add Businesses section, just share details about place or busniess and thats it."
+        desc="Didn't Got what you were lookin for? Maybe we missed it, but don't worry you can add it yourself in Add Businesses section, You must login first to Add Business."
       />
     </section>
   );

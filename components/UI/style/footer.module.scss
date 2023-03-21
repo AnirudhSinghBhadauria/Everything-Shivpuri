@@ -59,6 +59,7 @@
             color: #d0d0d0;
           }
 
+          li,
           a {
             font-size: 0.875rem;
             color: #a8c7fa;
@@ -66,6 +67,7 @@
 
             &:hover {
               border-bottom: 1px solid #a8c7fa;
+              cursor: pointer;
             }
           }
         }
@@ -76,6 +78,7 @@
       @include flex(row, flex-start, center);
       gap: 1.25rem;
       width: 100%;
+
       a {
         color: #d0d0d0;
         font-size: 0.875rem;
@@ -89,12 +92,12 @@
       .logout {
         border: 0;
         background-color: transparent;
-        color: #E21818;
+        color: #d94444;
         font-size: 0.875rem;
         border-bottom: 1px solid transparent;
-
+        cursor: pointer;
         &:hover {
-          border-bottom: 1px solid #E21818;
+          border-bottom: 1px solid #e21818;
         }
       }
     }

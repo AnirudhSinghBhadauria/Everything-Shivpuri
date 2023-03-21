@@ -31,7 +31,7 @@ const AppContextProvider = (props) => {
       Cookies.set("isLoggedIn", true);
       messageHandeler({ status: "success", value: "Successfully Logged" });
     } catch (error) {
-      messageHandeler({ value: `${error.message}`, status: "error" });
+      messageHandeler({ value: `${error.code}`, status: "error" });
       const credential = GoogleAuthProvider.credentialFromError(error);
     }
   };
@@ -43,7 +43,7 @@ const AppContextProvider = (props) => {
       Cookies.remove("isLoggedIn");
       messageHandeler({ status: "success", value: "Logged out" });
     } catch (error) {
-      messageHandeler({ status: "error", value: `${error.message}` });
+      messageHandeler({ status: "error", value: `${error.code}` });
       return;
     }
   };

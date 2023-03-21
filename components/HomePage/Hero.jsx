@@ -112,13 +112,13 @@ const Hero = () => {
                   <Image src={avtar2} alt="avtar-1" width="50" height="50" />
                   <Image src={avtar3} alt="avtar-3" width="50" height="50" />
                 </section>
-                <ButtonLink
-                  href=""
+                <a
+                  href="#community"
                   label="Join Community"
                   className={`${RegularSemiBold.className} ${classes.community}`}
                 >
                   JOIN COMMUNITY
-                </ButtonLink>
+                </a>
               </div>
             </section>
           </div>
@@ -131,8 +131,8 @@ const Hero = () => {
               message="Everything a Tourist needs to know"
             />
             <LineCard
-              href="/Good-To-Know"
-              label="Good to know"
+              href="/Genral"
+              label="Genral"
               title="Genral"
               message="Genral, Good To Know Resources"
             />
