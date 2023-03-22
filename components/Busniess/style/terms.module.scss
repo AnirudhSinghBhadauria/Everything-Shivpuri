@@ -1,34 +1,46 @@
 @import "../../../assets/base.scss";
 
 .container {
-  background-color: white;
+  // background-color: white;
   padding: 2rem;
-  color: black;
   width: 95%;
   border-radius: 0.75rem;
+  border: 1px solid $dark-accent;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
   @include flex(column, space-evenly, flex-start);
   gap: 1rem;
   position: relative;
 
   h2 {
+    color: $light-accent;
     font-size: 1.75rem;
     width: 100%;
     text-align: left;
     margin-bottom: 1rem;
+
+    span{
+      color: $yellow-accent;
+    }
   }
   p {
+    color: $light-accent;
     font-size: 0.875rem;
     max-width: 90%;
     line-height: 1.35rem;
   }
   .contact{
-     color: white;
+     color: $yellow-accent;
      padding: 0.5rem 2rem;
-     background-color: black;
      border-radius: 0.5rem;
      margin-top: 1rem;
+     border: 1px solid $dark-accent;
+     transition: border 200ms ease-in-out;
+
+     &:hover {
+      border: 1px solid $yellow-accent;
+     }
   }
   img{
      position: absolute;

@@ -7,6 +7,13 @@ $primary-yellow: hsl(66, 100%, 72%);
 $primary-purple: hsl(262, 97%, 76%);
 $primary-neon: hsl(81, 85%, 60%);
 
+$dark-accent: hsl(0, 0%, 25%);
+$light-accent: hsl(0, 0%, 38%);
+$opacity-accent: hsl(0, 0%, 70%);
+$yellow-accent: hsl(34, 65%, 74%);
+
+$gradient-yellow: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+
 @mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;

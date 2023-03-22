@@ -1,14 +1,20 @@
-import { RegularMedium, RegularBold, RegularSemiBold } from "assets/Fonts/fonts";
+import {
+  RegularMedium,
+  RegularBold,
+  RegularSemiBold,
+} from "assets/Fonts/fonts";
 import { smily } from "assets/Linkage";
 import ButtonLink from "components/Helper/ButtonLink";
 import React from "react";
 import classes from "./style/terms.module.scss";
-import Image from 'next/image'
+import Image from "next/image";
 
 const Terms = () => {
   return (
     <div className={classes.container}>
-      <h2 className={RegularBold.className}>Terms & Conditions</h2>
+      <h2 className={RegularBold.className}>
+        Terms & <span>Conditions</span>
+      </h2>
       <p className={RegularMedium.className}>
         "We take your privacy seriously. Any data collected on our website is
         used solely for the purpose of improving your experience and providing
@@ -28,9 +34,15 @@ const Terms = () => {
         you have any questions or concerns about our policies, please feel free
         to contact us."
       </p>
-      <ButtonLink href="/Contact-us" name="contact" className={`${RegularSemiBold.className} ${classes.contact}`}>Contact</ButtonLink>
+      <ButtonLink
+        href="/Contact"
+        name="contact"
+        className={`${RegularSemiBold.className} ${classes.contact}`}
+      >
+        Contact
+      </ButtonLink>
 
-      <Image src={smily} alt='smily' width='80' height='80' />
+      <Image src={smily} alt="smily" width="80" height="80" />
     </div>
   );
 };

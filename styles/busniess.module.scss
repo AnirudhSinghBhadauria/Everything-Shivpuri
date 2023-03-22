@@ -17,10 +17,10 @@
       @include flex(column, flex-end, flex-start);
       width: 95%;
       height: 13rem;
-      background-color: $primary-purple;
+      background: $gradient-yellow;
       color: black;
       border-radius: 0.75rem;
-      padding: 2rem;
+      padding: 1.25rem;
       position: relative;
 
       img {
@@ -36,21 +36,27 @@
       }
 
       h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
       p {
-        font-size: 0.9rem;
-        padding-bottom: 0.5rem;
+        font-size: 0.975rem;
       }
     }
   }
 
   form {
     @include flex(column, space-evenly, center);
-    gap: 1.5rem;
-    background-color: white;
+    gap: 1.65rem;
+    outline: 1px solid #404040;
     padding: 3rem 4rem;
     border-radius: 0.75rem;
+
+    span {
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: $gradient-yellow;
+    }
 
     .es {
       width: 3rem;
@@ -59,11 +65,12 @@
     }
 
     h2 {
-      color: rgb(0, 0, 0);
-      font-size: 1.75rem;
+      color: $light-accent;
+      font-size: 1.875rem;
       width: 100%;
       text-align: left;
       margin-bottom: 1rem;
+      word-spacing: 0.25rem;
     }
 
     .group {
@@ -73,36 +80,35 @@
       .label {
         position: absolute;
         width: 100%;
-        color: #00000079;
-        font-size: 0.9rem;
+        color: $light-accent;
+        font-size: 1rem;
         cursor: text;
         pointer-events: none;
         top: 1.2rem;
         left: 1rem;
         transition: all 100ms linear;
       }
-
+      
       input {
         width: 100%;
+        font-size: 1.05rem;
         padding: 1.75rem 0.75rem 0.5rem 0.75rem;
         border-radius: 0.5rem;
         border: 0;
-        background-color: white;
-        border: 1.5px solid #0000001a;
-        color: black;
+        background-color: $primary-background;
+        border: 1px solid $dark-accent;
+        color: $light-accent;
 
         &:focus {
-          outline: 1.5px solid $primary-purple;
-          border: 1.5px solid #00000000;
-          box-shadow: hsla(262, 97%, 76%, 0.289) 0px 4px 6px -1px,
-            hsla(262, 97%, 76%, 0.185) 0px 2px 4px -1px;
+          outline: 1px solid $yellow-accent;
+          border: 1px solid #00000000;
         }
       }
 
       input:focus ~ .label,
       input:not(:focus):valid ~ .label {
-        color: #843dff;
-        font-size: 0.75rem;
+        color: $yellow-accent;
+        font-size: 0.9rem;
         top: 0.4rem;
         left: 0.4rem;
       }
@@ -116,6 +122,8 @@
       border-radius: 0.5rem;
       border: 1.5px solid #0000001a;
       background-color: $primary-purple;
+      background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+
       transition: background-color 200ms ease-in-out;
 
       &:hover {
@@ -126,24 +134,24 @@
 
     .selectContainer {
       @include flex(row, space-evenly, center);
-      gap: 1rem;
+      gap: 2rem;
 
       select {
+        font-size: 1.05rem;
         padding: 0.75rem 1rem;
-        color: #00000081;
+        color: $light-accent;
         border-radius: 0.5rem;
-        background-color: white;
-        border: 0;
-        border: 1.5px solid #0000001a;
+        background-color: $primary-background;
+        border: 1px solid $dark-accent;
 
         option {
-          color: black;
+          color: $light-accent;
           text-align: left;
         }
 
         &:focus {
-          outline: 1.5px solid $primary-purple;
-          border: 1.5px solid #00000000;
+          outline: 1px solid $yellow-accent;
+          border: 1px solid #00000000;
         }
       }
     }
@@ -152,9 +160,11 @@
       width: 100%;
       padding: 0.75rem;
       border-radius: 4rem;
-      background-color: black;
-      color: white;
+      font-size: 1.1rem;
       cursor: pointer;
+      background-color: $primary-background;
+      color: white;
+      border: 1px solid $dark-accent;
     }
 
     .imageInput {

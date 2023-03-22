@@ -5,16 +5,16 @@ import {
 } from "assets/Fonts/fonts";
 import React from "react";
 import classes from "./style/text.module.scss";
-import Image from 'next/image';
+import Image from "next/image";
 import { curlyLines } from "assets/Linkage";
 
 const BusniessText = () => {
   return (
     <section className={classes.container}>
       <div>
-        <Image src={curlyLines} alt='curlyLines' width='117' height='100' />
+        <Image src={curlyLines} alt="curlyLines" width="117" height="100" />
         <h1 className={RegularSemiBold.className}>
-          Add businesses to <span>Everything</span> Shivpuri
+          <span className={classes.add}>Add businesses</span> to Everything Shivpuri
         </h1>
         <p className={RegularMedium.className}>
           Welcome to our <strong> 'Add Business' </strong> section, where
@@ -76,7 +76,8 @@ const BusniessText = () => {
           users to find the businesses they need. Fill out the following form
           carefully.{" "}
           <strong>
-            Share all the required information in correct format and click on 'Add Business'.
+            Share all the required information in correct format and click on
+            'Add Business'.
           </strong>
         </p>
       </div>

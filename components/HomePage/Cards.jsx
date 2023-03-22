@@ -35,7 +35,6 @@ const Cards = (props) => {
     ) : (
       <button
         className={`${RegularBold.className} ${classes.button}`}
-        buttonStyle={classes.buttons}
         label={props.label}
         onClick={login}
       >

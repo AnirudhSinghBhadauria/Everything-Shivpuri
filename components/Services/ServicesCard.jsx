@@ -71,17 +71,14 @@ const ServicesCard = (props) => {
   let className = `${classes.card} ${props.className ? props.className : ""}`;
 
   return (
-    <div
-      style={{ backgroundColor: props.back }}
-      className={className}
-    >
+    <div className={className}>
       <section className={classes.imageContainer}>
         <Image src={props.src} fill alt={props.id} />
       </section>
       <div>
         <section className={classes.headingContainer}>
           <h2 className={RegularMedium.className}>{props.name}</h2>
-          <IceCream fill="black" />
+          <IceCream fill="hsl(0, 0%, 50%)" />
         </section>
         {buttons}
       </div>

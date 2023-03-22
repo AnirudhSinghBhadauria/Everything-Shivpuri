@@ -290,8 +290,10 @@ const AddYourBusniess = () => {
         </div>
 
         <form onSubmit={submitHandeler}>
-          <ES className={classes.es} fill="black" />
-          <h2 className={RegularBold.className}>Add your business.</h2>
+          <ES className={classes.es} fill="#404040" />
+          <h2 className={RegularBold.className}>
+            Add your <span>business.  </span>
+          </h2>
 
           <input
             className={classes.imageInput}

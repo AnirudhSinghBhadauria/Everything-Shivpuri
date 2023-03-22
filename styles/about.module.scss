@@ -1,0 +1,57 @@
+@import "../assets/base.scss";
+
+.about {
+  @include flex(column, space-evenly, center);
+  padding: 5rem 2rem 4rem 2rem;
+  border-radius: 0.575rem;
+  position: relative;
+  gap: 2rem;
+
+  .more {
+    color: $light-accent;
+    font-size: 5.25rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    word-spacing: 1rem;
+
+    span {
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    }
+  }
+
+  div {
+    width: 70%;
+    .content {
+      color: $light-accent;
+
+      text-align: left;
+      line-height: 1.35rem;
+      margin: 0 auto;
+    }
+
+    .Contact {
+      background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+
+      color: rgb(0, 0, 0);
+      border-radius: 0.575rem;
+      padding: 0.75rem 2rem;
+      margin-top: 2rem;
+      transition: all 500ms ease;
+
+      &:hover {
+        border-radius: 0.275rem;
+      }
+    }
+  }
+
+  .everything {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.875rem;
+  }
+}

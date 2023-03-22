@@ -30,7 +30,7 @@ export const social =
 // AddBusniess-------------------------------------------------------
 
 export const es =
-  "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2Fchoose%20image%20v2.webp?alt=media&token=041fe29f-aaa5-4695-82be-4bd148e3ee9b";
+  "https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/assets%2FchooseImage.webp?alt=media&token=ac825a28-4de7-4942-86bb-98253e3f92c6";
 
 // addBusniess-------------------------------------------------------
 
