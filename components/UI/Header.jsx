@@ -46,8 +46,8 @@ const Header = () => {
           <div className={classes.displayPicture}>
             <Image
               src={photoURL}
-              width="30"
-              height="30"
+              width="32"
+              height="32"
               alt="display-picture"
             />
           </div>

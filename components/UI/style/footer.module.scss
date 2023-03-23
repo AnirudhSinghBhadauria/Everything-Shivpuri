@@ -4,27 +4,27 @@
   @include flex(column, space-evenly, center);
 
   svg {
-    margin: 2rem 0rem 0rem 0rem;
+    margin: 2rem 0rem -0.5rem 0rem;
   }
   .container {
     @include flex(column, space-evenly, center);
-    padding: 0rem 5rem;
+    // padding: 0rem 5rem;
     margin: 4.85rem 0rem;
     gap: 2rem;
 
     .topSection {
       @include flex(row, space-evenly, center);
-      gap: 6rem;
+      gap: 8rem;
 
       section:nth-of-type(1) {
         @include flex(column, flex-start, flex-start);
-        gap: 1rem;
+        gap: 1.25rem;
 
         p {
           max-width: 25rem;
-          font-size: 0.875rem;
+          font-size: 0.92rem;
           color: #d0d0d0;
-          line-height: 1.2rem;
+          line-height: 1.32rem;
         }
 
         button {
@@ -33,8 +33,8 @@
           transition: all 300 cubic-bezier(0.165, 0.84, 0.44, 1);
 
           svg {
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             margin: 0;
           }
 
@@ -46,22 +46,23 @@
 
       section:nth-of-type(2) {
         @include flex(row, space-evenly, flex-start);
-        gap: 4rem;
+        gap: 5rem;
 
         ul {
           @include flex(column, flex-start, flex-start);
-          gap: 1rem;
+          gap: 1.5rem;
           margin-top: 2rem;
           list-style-type: none;
 
           p {
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             color: #d0d0d0;
+            letter-spacing: 0.01rem;
           }
 
           li,
           a {
-            font-size: 0.875rem;
+            font-size: 0.945rem;
             color: #a8c7fa;
             border-bottom: 1px solid transparent;
 
@@ -81,7 +82,8 @@
 
       a {
         color: #d0d0d0;
-        font-size: 0.875rem;
+        font-size: 0.945rem;
+
         border-bottom: 1px solid transparent;
 
         &:hover {
@@ -92,12 +94,14 @@
       .logout {
         border: 0;
         background-color: transparent;
-        color: #d94444;
-        font-size: 0.875rem;
+        color: #a8c7fa;
+
+        font-size: 0.945rem;
+
         border-bottom: 1px solid transparent;
         cursor: pointer;
         &:hover {
-          border-bottom: 1px solid #e21818;
+          border-bottom: 1px solid #a8c7fa;
         }
       }
     }

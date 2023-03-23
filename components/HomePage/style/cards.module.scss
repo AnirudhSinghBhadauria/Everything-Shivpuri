@@ -2,11 +2,10 @@
 
 .card {
   @include flex(column, space-between, flex-start);
-  height: 12rem;
-  height: clmap(6.25rem, 12.5vw, 12rem);
-  width: 22rem;
+  height: 13.25rem;
+  width: 24rem;
   border-radius: 0.75rem;
-  padding: 1.5rem;
+  padding: 1.75rem;
   transform: skew(0deg, -14deg) rotate(-1deg);
   transition: transform 200ms ease-in-out;
   position: absolute;
@@ -15,7 +14,7 @@
     @include flex(row, space-between, center);
     width: 100%;
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: black;
       letter-spacing: 0.05rem;
     }
@@ -30,7 +29,7 @@
     color: black;
     border: 1px solid black;
     padding: 0.5rem 1rem;
-    font-size: 0.65rem;
+    font-size: 0.675rem;
     cursor: pointer;
     transition: all 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
 

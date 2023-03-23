@@ -41,6 +41,7 @@ const AppContextProvider = (props) => {
       messageHandeler({ status: "loading", value: "Logging out" });
       const signout = await signOut(auth);
       Cookies.remove("isLoggedIn");
+      localStorage.setItem("ifUser", "false");
       messageHandeler({ status: "success", value: "Logged out" });
     } catch (error) {
       messageHandeler({ status: "error", value: `${error.code}` });
@@ -52,16 +53,31 @@ const AppContextProvider = (props) => {
     const unsub = onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
-        dispatch({ type: "USER", payload: user });
         console.log(user);
+        dispatch({ type: "USER", payload: user });
+        localStorage.setItem("ifUser", "true");
       } else {
         dispatch({ type: "USER", payload: "" });
         console.log("NO-USER");
+        localStorage.setItem("ifUser", "false");
       }
     });
 
     return () => unsub();
   }, []);
+
+  useEffect(() => {
+    if (curruntUser) {
+      if (localStorage.getItem("ifUser") === "true") {
+       const name = curruntUser.displayName.split(' ')[0];
+
+        messageHandeler({
+          status: "success",
+          value: `Hey, ${name}. Great to see you,`,
+        });
+      }
+    }
+  }, [curruntUser]);
 
   const value = {
     message: message,

@@ -39,7 +39,7 @@ const BusniessText = () => {
         <ul className={RegularMedium.className}>
           <li>
             <p>
-              Name of the busniess or place must be of{" "}
+              Name of the busniess or place must be of
               <strong>atleast 3 characters</strong> and&nbsp;
               <strong>at max 20 characters are allowed.</strong>
             </p>
@@ -56,9 +56,8 @@ const BusniessText = () => {
               <strong> Phone Number must be a Indian Phone Number. </strong>It
               should have
               <strong>
-                {" "}
-                atleast 10 digits and can have max 15 digits.{" "}
-              </strong>{" "}
+                atleast 10 digits and can have max 15 digits.
+              </strong>
               Number may or may not start with 0.
             </p>
           </li>

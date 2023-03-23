@@ -56,10 +56,10 @@
 
     .joinButton {
       @include flex(column, space-evenly, center);
-      gap: 1rem;
       background-color: $primary-orange;
       padding: 2rem 1.75rem;
       border-radius: 1.5rem;
+      gap: 1rem;
 
       p {
         color: black;
@@ -170,9 +170,9 @@
         border-radius: 1rem;
         gap: clamp(1.25rem, 2.5vw, 2rem);
 
-        &:hover{
-          sup{
-            color: $primary-orange
+        &:hover {
+          sup {
+            color: $primary-orange;
           }
         }
 
@@ -193,7 +193,7 @@
           h1 {
             font-size: 5rem;
             position: relative;
-            sup{
+            sup {
               position: absolute;
               top: 0;
               right: -0.5rem;

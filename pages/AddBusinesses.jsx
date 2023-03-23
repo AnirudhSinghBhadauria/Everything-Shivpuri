@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import { options } from "../lib/getData";
 import { db, storage } from "../firebase";
 import { es, stars } from "assets/Linkage";
+import Terms from "components/Busniess/Terms";
 import classes from "../styles/busniess.module.scss";
 import { appContext } from "store/AppContextProvider";
 import BusniessText from "components/Busniess/BusniessText";
@@ -18,7 +19,7 @@ import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import React, { useContext, useReducer, Fragment, useEffect } from "react";
 import { busniessReducer, INITIAL_STATE } from "../Reducer/addBusniess";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import Terms from "components/Busniess/Terms";
+
 
 const formatFileSize = function (bytes) {
   const sufixes = ["B", "kB", "MB", "GB", "TB"];
@@ -44,12 +45,6 @@ const AddYourBusniess = () => {
     back,
   } = state;
 
-  useEffect(() => {
-    if (!curruntUser) {
-      push("/");
-    }
-  }, [curruntUser]);
-
   const nameHandeler = (event) =>
     dispatch({ type: "NAME", payload: event.target.value.toUpperCase() });
   const locHandeler = (event) =>
@@ -69,7 +64,6 @@ const AddYourBusniess = () => {
       cat === "Education" ||
       cat === "Emergency"
     ) {
-      dispatch({ type: "BACK", payload: "#F2F9FF" });
       dispatch({ type: "PATH", payload: "Genral" });
     } else if (
       cat === "Hotels" ||
@@ -78,10 +72,8 @@ const AddYourBusniess = () => {
       cat === "Theatres" ||
       cat === "Travel"
     ) {
-      dispatch({ type: "BACK", payload: "#FFFAED" });
       dispatch({ type: "PATH", payload: "Tourist" });
     } else {
-      dispatch({ type: "BACK", payload: "#FFF2F2" });
       dispatch({ type: "PATH", payload: "Essentials" });
     }
   };
@@ -292,7 +284,7 @@ const AddYourBusniess = () => {
         <form onSubmit={submitHandeler}>
           <ES className={classes.es} fill="#404040" />
           <h2 className={RegularBold.className}>
-            Add your <span>business.  </span>
+            Add your <span>business. </span>
           </h2>
 
           <input

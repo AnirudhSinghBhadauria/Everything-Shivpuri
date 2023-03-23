@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
 }
-*:focus{
+*:focus {
   outline: 0;
 }
 
@@ -190,7 +190,7 @@ input[type="number"] {
   height: max-content;
 }
 
-.focused{
+.focused {
   top: 1.2rem;
   left: 1rem;
 }

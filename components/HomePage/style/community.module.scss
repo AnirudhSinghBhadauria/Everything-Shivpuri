@@ -12,18 +12,23 @@
 
     h2 {
       font-size: clamp(1.25rem, 2.5vw, 2rem);
-      font-size: 2.25rem;
+      font-size: 2.3rem;
       color: black;
     }
     p {
       color: black;
-      max-width: 20rem;
-      font-size: 1rem;
+      max-width: 21rem;
+      font-size: 1.05rem;
       line-height: 1.25rem;
     }
     .socialMedia {
       @include flex(row, space-evenly, center);
-      gap: 1rem;
+      gap: 0.775rem;
+
+      svg {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
     }
   }
 }

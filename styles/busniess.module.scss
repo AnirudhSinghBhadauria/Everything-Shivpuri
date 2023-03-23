@@ -17,7 +17,7 @@
       @include flex(column, flex-end, flex-start);
       width: 95%;
       height: 13rem;
-      background: $gradient-yellow;
+      background: #FFE8B4;
       color: black;
       border-radius: 0.75rem;
       padding: 1.25rem;
@@ -121,13 +121,12 @@
       padding: 0.75rem 1rem;
       border-radius: 0.5rem;
       border: 1.5px solid #0000001a;
-      background-color: $primary-purple;
-      background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+      background: $yellow-accent;
 
       transition: background-color 200ms ease-in-out;
 
       &:hover {
-        background-color: hsla(262, 97%, 76%, 0.95);
+        background-color: #FEC868;
         cursor: pointer;
       }
     }
