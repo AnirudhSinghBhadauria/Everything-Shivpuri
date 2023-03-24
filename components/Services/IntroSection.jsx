@@ -7,11 +7,11 @@ const IntroSection = ({ background, color, heading, desc }) => {
   return (
     <section
       style={{
-        background: `url(${background}) center/cover`,
         color: `${color}`,
       }}
       className={classes.intro}
     >
+      <Image src={background} fill alt='background-image' />
       <div>
         <h1 className={Regular.className}>{heading}</h1>
         <p className={RegularMedium.className}>{desc}</p>

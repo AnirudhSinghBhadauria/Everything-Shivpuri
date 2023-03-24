@@ -1,12 +1,6 @@
 import React, { Fragment } from "react";
 import classes from "./style/displayServices.module.scss";
 import ServicesCard from "../Services/ServicesCard";
-import {
-  Regular,
-  RegularBold,
-  RegularMedium,
-  RegularSemiBold,
-} from "assets/Fonts/fonts";
 import IntroSection from "./IntroSection";
 import Didnt from "./Didnt";
 

@@ -1,6 +1,71 @@
-@import '../assets/base.scss';
+@import "../assets/base.scss";
 
 .contact {
-     width: 100%;
-     background-color: white;
+  @include flex(column, space-even44, center);
+  padding: 5rem 2rem 3rem 2rem;
+  border-radius: 0.575rem;
+  position: relative;
+  gap: 2rem;
+  width: 100%;
+
+  .heading {
+    color: $light-accent;
+    font-size: 5.5rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    word-spacing: 1rem;
+    margin-bottom: 0.5rem;
+
+    span {
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    }
+  }
+
+  p {
+    color: $light-accent;
+    font-size: 1.1rem;
+    text-align: left;
+    line-height: 1.5rem;
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  form {
+    @include flex(column, flex-end, flex-end);
+    gap: 1.75rem;
+    margin-block: 2rem;
+
+    textarea {
+      max-width: 44rem;
+      min-width: 44rem;
+      min-height: 10rem;
+      letter-spacing: 0.02rem;
+
+      padding: 2.5rem;
+      background-color: $primary-background;
+      border: 1px solid $dark-accent;
+      font-size: 1.1rem;
+      color: $light-accent;
+
+      border-radius: 0.5rem;
+    }
+
+    button {
+      padding: 0.75rem 3rem;
+      border: 1px solid $dark-accent;
+      color: black;
+      background-color: #c1dfc4;
+      font-size: 1.1rem;
+      border-radius: 0.5rem;
+      transition: background-color 400ms linear;
+
+      &:hover {
+        background-color: #bfdfc2da;
+        cursor: pointer;
+      }
+    }
+  }
 }

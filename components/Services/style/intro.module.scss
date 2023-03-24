@@ -9,7 +9,13 @@
   position: relative;
   margin-top: 0.45rem;
 
+  img {
+    border-radius: 1.5rem;
+    object-fit: cover;
+  }
+
   div {
+    z-index: 1;
     padding: 1.5rem;
     h1 {
       font-size: 6.5rem;

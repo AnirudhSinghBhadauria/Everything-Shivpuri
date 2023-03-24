@@ -1,11 +1,10 @@
 @import "../../../assets/base.scss";
 
 .modalContainer {
+  @include flex(row, flex-end, center);
   position: fixed;
-  bottom: 0;
   width: 100%;
   z-index: 10;
-  @include flex(row, flex-end, center);
   padding: 0.5rem;
   animation: mountIn 250ms 1 alternate ease;
 
@@ -19,7 +18,7 @@
 
     p {
       max-width: 30rem;
-      font-size: 0.975rem;
+      font-size: 1rem;
     }
 
     .close {
