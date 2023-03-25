@@ -11,7 +11,7 @@ const IntroSection = ({ background, color, heading, desc }) => {
       }}
       className={classes.intro}
     >
-      <Image src={background} fill alt='background-image' />
+      <Image priority src={background} fill alt='background-image' />
       <div>
         <h1 className={Regular.className}>{heading}</h1>
         <p className={RegularMedium.className}>{desc}</p>
