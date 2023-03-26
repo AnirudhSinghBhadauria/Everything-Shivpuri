@@ -16,8 +16,11 @@
       border-radius: 1rem;
       padding: 1rem;
       gap: 1rem;
-      background-color: white;
-
+      background-size: 400% 400%;
+      background-color: #f6f6f6;
+      background-image: linear-gradient(315deg, #f6f6f6 0%, #e9e9e9 74%);
+      animation: gradient 15s ease infinite;
+      
       &:hover {
         .heroImage {
           transform: scale(1.03);
@@ -46,7 +49,6 @@
         .heroImage {
           width: clamp(12.25rem, 24.5vw, 24rem);
           height: clamp(8.5rem, 17vw, 16.5rem);
-
           border-radius: 1rem;
           filter: contrast(115%) grayscale(40%);
           transition: all 350ms ease;
@@ -238,5 +240,28 @@
         width: 100%;
       }
     }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
