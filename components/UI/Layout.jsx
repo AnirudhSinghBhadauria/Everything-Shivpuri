@@ -4,9 +4,10 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Modal from "components/Helper/Modal";
 import { appContext } from "store/AppContextProvider";
+import Bar from "./Bar";
 
 const Layout = (props) => {
-  const { message } = useContext(appContext);
+  const { message, sidebar } = useContext(appContext);
   const { value, status } = message;
 
   return (
@@ -14,6 +15,13 @@ const Layout = (props) => {
       <Header />
       <main className={classes.main}>{props.children}</main>
       <Footer />
+
+      {sidebar && (
+        <section className={classes.bottomBar}>
+          <Bar />
+        </section>
+      )}
+
       {value && <Modal message={value} status={status} />}
     </div>
   );

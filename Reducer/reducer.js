@@ -4,6 +4,7 @@ export const INITIAL_STATE = {
     status: "",
   },
   curruntUser: "",
+  sidebar: false
 };
 
 export const appReducer = (state, action) => {
@@ -17,6 +18,11 @@ export const appReducer = (state, action) => {
       return {
         ...state,
         curruntUser: action.payload,
+      };
+    case "SIDEBAR":
+      return {
+        ...state,
+        sidebar: action.payload
       };
     default:
       return state;

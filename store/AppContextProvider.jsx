@@ -1,7 +1,6 @@
 import React, { createContext, useReducer, useEffect } from "react";
 import { INITIAL_STATE, appReducer } from "../Reducer/reducer";
 import {
-  getAuth,
   signInWithPopup,
   GoogleAuthProvider,
   onAuthStateChanged,
@@ -15,10 +14,13 @@ export const appContext = createContext();
 const AppContextProvider = (props) => {
   const [state, dispatch] = useReducer(appReducer, INITIAL_STATE);
 
-  const { message, curruntUser } = state;
+  const { message, curruntUser, sidebar } = state;
 
   const messageHandeler = (input) =>
     dispatch({ type: "MESSAGE", payload: input });
+
+  const sidebarHandeler = (value) =>
+    dispatch({ type: "SIDEBAR", payload: value });
 
   const signinWithGoogle = async () => {
     try {
@@ -53,7 +55,6 @@ const AppContextProvider = (props) => {
     const unsub = onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
-        console.log(user);
         dispatch({ type: "USER", payload: user });
         localStorage.setItem("ifUser", "true");
       } else {
@@ -69,7 +70,7 @@ const AppContextProvider = (props) => {
   useEffect(() => {
     if (curruntUser) {
       if (localStorage.getItem("ifUser") === "true") {
-       const name = curruntUser.displayName.split(' ')[0];
+        const name = curruntUser.displayName.split(" ")[0];
 
         messageHandeler({
           status: "success",
@@ -85,13 +86,10 @@ const AppContextProvider = (props) => {
     signinWithGoogle: signinWithGoogle,
     curruntUser: curruntUser,
     signOutGoogle: signOutGoogle,
+    sidebar,
+    sidebarHandeler,
   };
 
-  if (curruntUser) {
-    console.log(curruntUser.uid);
-  } else {
-    console.log("NO USER");
-  }
 
   return (
     <appContext.Provider value={value}>{props.children}</appContext.Provider>

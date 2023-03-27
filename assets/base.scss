@@ -14,6 +14,11 @@ $yellow-accent: hsl(34, 65%, 74%);
 
 $gradient-yellow: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
 
+$SCREEN: '1200px';
+$PAD: '960px';
+$TABLETS: '768px';
+$MOBILE: '481px'; 
+
 @mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;
