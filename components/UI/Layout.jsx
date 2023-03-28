@@ -7,14 +7,23 @@ import { appContext } from "store/AppContextProvider";
 import Bar from "./Bar";
 
 const Layout = (props) => {
-  const { message, sidebar } = useContext(appContext);
+  const { message, sidebar, sidebarHandeler } = useContext(appContext);
   const { value, status } = message;
 
+  const mainClasses = sidebar
+    ? `${classes.main} ${classes.blackAndWhite}`
+    : `${classes.main}`;
+
+  const sidebarOpener = (action) => {
+    action.preventDefault();
+    sidebarHandeler(true)
+  };
+
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} onContextMenu={sidebarOpener}>
       <Header />
-      <main className={classes.main}>{props.children}</main>
-      <Footer />
+      <main className={mainClasses}>{props.children}</main>
+      {/* <Footer /> */}
 
       {sidebar && (
         <section className={classes.bottomBar}>

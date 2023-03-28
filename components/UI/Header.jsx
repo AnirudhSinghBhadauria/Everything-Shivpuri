@@ -9,12 +9,14 @@ import { appContext } from "store/AppContextProvider";
 import Opener from "../../assets/svg/Opener";
 
 const Header = () => {
-  const { signinWithGoogle, curruntUser, sidebarHandeler } =
+  const { signinWithGoogle, curruntUser, sidebarHandeler, barClassesHandeler } =
     useContext(appContext);
 
   const photoURL = curruntUser && curruntUser.photoURL;
 
-  const sidebarOpenerHandeler = () => sidebarHandeler(true);
+  const sidebarOpenerHandeler = () => {
+    sidebarHandeler(true);
+  };
 
   return (
     <nav className={classes.navWrapper}>

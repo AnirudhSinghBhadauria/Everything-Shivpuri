@@ -4,7 +4,7 @@
   @include flex(row, flex-end, center);
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   padding: 0.5rem;
   bottom: 0;
   animation: mountIn 250ms 1 alternate ease;
@@ -118,5 +118,15 @@
 @keyframes rotation {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+// -------------------------------------MEDIA
+
+@media (max-width: $MOBILE) {
+  .modalContainer {
+    .modal {
+      gap: 2rem;
+    }
   }
 }

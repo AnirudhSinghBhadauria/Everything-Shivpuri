@@ -16,8 +16,8 @@ $gradient-yellow: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
 
 $SCREEN: '1200px';
 $PAD: '960px';
-$TABLETS: '768px';
-$MOBILE: '481px'; 
+$TABLET: '768px';
+$MOBILE: '495px'; 
 
 @mixin flex($direction, $justify, $align) {
   display: flex;

@@ -14,13 +14,16 @@ export const appContext = createContext();
 const AppContextProvider = (props) => {
   const [state, dispatch] = useReducer(appReducer, INITIAL_STATE);
 
-  const { message, curruntUser, sidebar } = state;
+  const { message, curruntUser, sidebar, barClasses } = state;
 
   const messageHandeler = (input) =>
     dispatch({ type: "MESSAGE", payload: input });
 
   const sidebarHandeler = (value) =>
     dispatch({ type: "SIDEBAR", payload: value });
+
+  const barClassesHandeler = (input) =>
+    dispatch({ type: "BAR-CLASSES", payload: input });
 
   const signinWithGoogle = async () => {
     try {
@@ -88,8 +91,9 @@ const AppContextProvider = (props) => {
     signOutGoogle: signOutGoogle,
     sidebar,
     sidebarHandeler,
+    barClassesHandeler,
+    barClasses,
   };
-
 
   return (
     <appContext.Provider value={value}>{props.children}</appContext.Provider>

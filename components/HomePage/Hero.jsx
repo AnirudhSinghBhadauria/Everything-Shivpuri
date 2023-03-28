@@ -42,6 +42,7 @@ const Hero = () => {
               width="384"
               height="264"
               alt="Chatri"
+              priority
             />
           </section>
         </div>
@@ -62,6 +63,7 @@ const Hero = () => {
               width="250"
               height="250"
               alt="chatri"
+              priority
             />
             <h2 className={RegularBold.className}>CULTURAL HERITAGE</h2>
           </div>
@@ -75,7 +77,7 @@ const Hero = () => {
               <h2 className={RegularSemiBold.className}>Empowering</h2>
             </section>
             <p className={RegularMedium.className}>
-              Your One-Stop <br /> Destination for Local Information and
+              Your One-Stop Destination for Local Information and
               Community Wellness & Growth.
             </p>
           </div>

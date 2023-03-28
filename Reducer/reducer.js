@@ -4,7 +4,8 @@ export const INITIAL_STATE = {
     status: "",
   },
   curruntUser: "",
-  sidebar: false
+  sidebar: false,
+  barClasses: ``,
 };
 
 export const appReducer = (state, action) => {
@@ -22,7 +23,12 @@ export const appReducer = (state, action) => {
     case "SIDEBAR":
       return {
         ...state,
-        sidebar: action.payload
+        sidebar: action.payload,
+      };
+    case "BAR-CLASSES":
+      return {
+        ...state,
+        barClasses: action.payload,
       };
     default:
       return state;
