@@ -23,7 +23,7 @@ const Layout = (props) => {
     <div className={classes.wrapper} onContextMenu={sidebarOpener}>
       <Header />
       <main className={mainClasses}>{props.children}</main>
-      {/* <Footer /> */}
+      <Footer />
 
       {sidebar && (
         <section className={classes.bottomBar}>

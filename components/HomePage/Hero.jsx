@@ -77,8 +77,8 @@ const Hero = () => {
               <h2 className={RegularSemiBold.className}>Empowering</h2>
             </section>
             <p className={RegularMedium.className}>
-              Your One-Stop Destination for Local Information and
-              Community Wellness & Growth.
+              Your One-Stop Destination for Local Information and Community
+              Wellness & Growth.
             </p>
           </div>
         </section>
@@ -101,11 +101,9 @@ const Hero = () => {
             </section>
 
             <section>
-              <p className={RegularMedium.className}>
+              <p className={RegularSemiBold.className}>
                 Everything Shivpuri. <br />
-                <strong>
-                  Comprehensive Guide to Local Opportunities and Resources.
-                </strong>
+                Comprehensive Guide to Local Opportunities and Resources.
               </p>
 
               <div>

@@ -176,7 +176,7 @@
 
         &:hover {
           sup {
-            color: $primary-orange;
+            color: $primary-neon;
           }
         }
 
@@ -390,6 +390,8 @@
           section:nth-of-type(2) {
             p {
               font-size: 0.85rem;
+              line-height: 1.15rem;
+              color: $dark-accent;
             }
           }
         }
@@ -520,31 +522,49 @@
         div:nth-of-type(2) {
           padding: 0.875rem;
           gap: 1.25rem;
+          width: 100%;
 
           p {
             font-size: 0.6rem;
+            line-height: 0.75rem;
           }
         }
       }
       .lineSection {
         .upperSection {
           @include flex(column-reverse, space-evenly, center);
+          background-color: $primary-background;
+          border: 1px solid $light-accent;
+          color: $primary-green;
+
           section:nth-of-type(1) {
             @include flex(row, space-evenly, center);
-            width: 100%;
+            width: 90%;
 
             .climate {
               font-size: 0.8rem;
+              color: black;
+              border: 1px solid $light-accent;
+              background-color: $primary-blue;
             }
 
             h1 {
               font-size: 4rem;
             }
-            
           }
           section:nth-of-type(2) {
+            padding: 0.75rem;
+            gap: 1.5rem;
             p {
               font-size: 1rem;
+              line-height: 1.25rem;
+              color: $light-accent;
+            }
+
+            div {
+              .community {
+                color: $light-accent;
+              }
             }
           }
         }
@@ -552,3 +572,22 @@
     }
   }
 }
+
+// section:nth-of-type(1) {
+//   .climate {
+//     color: black;
+//     border: 1px solid $light-accent;
+//     background-color: $primary-blue;
+//   }
+// }
+// section:nth-of-type(2) {
+//   p {
+//     color: $light-accent;
+//   }
+
+//   div {
+//     .community {
+//       color: $light-accent;
+//     }
+//   }
+// }

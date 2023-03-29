@@ -2,13 +2,13 @@
 
 .navWrapper {
   @include flex(row, space-between, center);
-  padding: 1rem clamp(1rem, 3.5vw, 3rem); 
+  padding: 1rem clamp(1rem, 3.5vw, 3rem);
   width: 100%;
 
   .ESContainer {
     flex: 2;
     @include flex(row, center, center);
-    
+
     .ES {
       width: 33px;
       height: 33px;
@@ -52,11 +52,6 @@
       }
     }
 
-    svg {
-      width: 18.75px;
-      height: 15px;
-    }
-
     .smallScreeen {
       @include flex(row, space-evenly, center);
       display: none;
@@ -78,10 +73,15 @@
     .mailWrapper {
       @include flex(row, center, center);
       background-color: $primary-yellow;
-      padding: 0.4rem;
       border-radius: 5rem;
+      padding: 0.4rem;
       width: 35px;
       height: 35px;
+
+      svg {
+        width: 18.75px;
+        height: 15px;
+      }
     }
 
     .displayPicture {
@@ -125,6 +125,56 @@
       .line {
         width: 1.25rem;
         height: 0.1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .navWrapper {
+    padding: 0.75rem 0.75rem;
+
+    .ESContainer {
+      .ES {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .rightHeader {
+      a {
+        padding: 0.4rem 1.25rem;
+        font-size: 0.6rem;
+      }
+      .mailWrapper {
+        padding: 0.4rem;
+        width: 28px;
+        height: 28px;
+
+        svg {
+          width: 15px;
+          height: 12px;
+        }
+      }
+
+      .smallScreeen {
+        .opener {
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      .line {
+        width: 1rem;
+        height: 0.1rem;
+        background-color: $primary-yellow;
+      }
+
+      .displayPicture {
+        img {
+          width: 28px;
+          height: 28px;
+        }
       }
     }
   }

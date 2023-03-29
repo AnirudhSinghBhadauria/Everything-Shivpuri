@@ -6,14 +6,12 @@
   min-height: 90vh;
   position: relative;
 
-
-  .zigzag{
+  .zigzag {
     position: absolute;
     top: 4rem;
     right: 4rem;
-
   }
-  .rings{
+  .rings {
     position: absolute;
     bottom: 5rem;
     left: 5rem;
@@ -22,4 +20,38 @@
   }
 }
 
+// -------------------------------------MEDIA
 
+@media (max-width: $PAD) {
+  .wrapper {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    min-height: 100%;
+    gap: clamp(2.75rem, 5.5vw, 5rem);
+    padding: 5.5rem 0rem 7rem 0rem;
+  }
+
+  .zigzag,
+  .rings {
+    display: none;
+  }
+}
+
+@media (max-width: $TABLET) {
+  .wrapper {
+    gap: 1rem;
+    padding: 2rem 0rem 2.75rem 0rem;
+  }
+
+  .zigzag,
+  .rings {
+    display: none;
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .wrapper {
+    gap: 0.75rem;
+    padding: 2rem 0rem 2.75rem 0rem;
+  }
+}

@@ -4,11 +4,12 @@
   @include flex(column, space-between, flex-start);
   height: 13.25rem;
   width: 24rem;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   padding: 1.75rem;
   transform: skew(0deg, -14deg) rotate(-1deg);
   transition: transform 200ms ease-in-out;
   position: absolute;
+  outline: 3px solid black;
 
   div {
     @include flex(row, space-between, center);
@@ -41,6 +42,97 @@
   &:hover {
     .arrow {
       transform: translate(4px, -4px);
+    }
+  }
+
+  // section {
+  //   @include flex(row, space-between, center);
+  //   width: 100%;
+
+  //   div {
+  //     width: 2.55rem;
+  //     height: 2.55rem;
+  //     border-radius: 50%;
+  //     outline: 3px solid black;
+  //   }
+  // }
+
+  &:nth-of-type(1) {
+    background-color: white;
+    box-shadow: 7px 7px $light-accent;
+  }
+  &:nth-of-type(2) {
+    background-color: rgb(249, 130, 190);
+    box-shadow: 7px 7px rgb(255, 82, 168);
+  }
+  &:nth-of-type(3) {
+    background-color: $dark-yellow;
+    box-shadow: 7px 7px hsl(44, 100%, 64%);
+  }
+  &:nth-of-type(4) {
+    background-color: hsl(262, 97%, 76%);
+    box-shadow: 7px 7px hsl(262, 100%, 88%);
+  }
+  &:nth-of-type(5) {
+    background-color: $primary-green;
+    box-shadow: 7px 7px $primary-neon;
+  }
+}
+
+// -----------------------------MEDIA
+
+@media (max-width: $PAD) {
+  .card {
+    position: static;
+    transform: none;
+    padding: 1rem;
+    height: auto;
+    gap: 5rem;
+    width: 20rem;
+    transform: skew(0deg, -10deg) rotate(-2deg);
+
+    &:nth-of-type(4) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .card {
+    transform: none;
+    gap: 1.25rem;
+    width: 80%;
+    padding: 1rem;
+
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3),
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      box-shadow: 0px 0px $light-accent;
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .card {
+    transform: none;
+    width: 100%;
+    gap: 1.25rem;
+    padding: 0.875rem;
+
+    div {
+      h1 {
+        font-size: 1.25rem;
+      }
+    }
+
+    .button {
+      border: 0px solid $dark-accent;
+      padding: 0.5rem 1.65rem;
+      font-size: 0.575rem;
+      color: white;
+      background-color: hsla(0, 0%, 0%, 0.75);
     }
   }
 }

@@ -8,7 +8,6 @@
   }
   .container {
     @include flex(column, space-evenly, center);
-    // padding: 0rem 5rem;
     margin: 4.85rem 0rem;
     gap: 2rem;
 
@@ -102,6 +101,111 @@
         cursor: pointer;
         &:hover {
           border-bottom: 1px solid #a8c7fa;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------------------MEDIA
+
+@media (max-width: $SCREEN) {
+  .footer {
+    svg {
+      width: 90%;
+    }
+
+    .container {
+      margin: 4.5rem 0rem;
+      gap: 2.25rem;
+      .topSection {
+        gap: clamp(3.25rem, 6.5vw, 6rem);
+        section:nth-of-type(2) {
+          gap: 3.875rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $PAD) {
+  .footer {
+    .container {
+      margin: 3.875rem 0rem;
+      gap: 3rem;
+      padding: 0rem clamp(4.25rem, 8.5vw, 8rem);
+
+      .topSection {
+        @include flex(column, space-evenly, center);
+        gap: 1rem;
+
+        section:nth-of-type(1) {
+          width: 100%;
+
+          p {
+            max-width: max-content;
+          }
+        }
+        section:nth-of-type(2) {
+          @include flex(row, space-around, flex-start);
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .footer {
+    .container {
+      padding: 0rem clamp(2.75rem, 5.5vw, 5rem);
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .footer {
+
+    svg {
+      width: 100%;
+    }
+
+    .container {
+      padding: 0rem clamp(1.25rem, 2.5vw, 2rem);
+
+      .topSection {
+        section:nth-of-type(1) {
+          p {
+            font-size: 0.8rem;
+            line-height: 1.15rem;
+          }
+
+          button {
+            svg {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+
+        section:nth-of-type(2) {
+          gap: 2.5rem;
+
+          ul {
+            p {
+              font-size: 0.75rem;
+            }
+
+            a {
+              font-size: 0.875em;
+            }
+          }
+        }
+      }
+
+      .bottomSection {
+        .logout, a {
+          font-size: 0.875em;
         }
       }
     }

@@ -48,6 +48,7 @@ const Cards = (props) => {
         <h1 className={RegularMedium.className}>{props.title}</h1>
         <IceCream className={classes.arrow} fill="black" />
       </div>
+
       {content}
     </section>
   );

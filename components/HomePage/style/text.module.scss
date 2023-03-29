@@ -5,3 +5,11 @@
   gap: 3rem;
   margin-bottom: 3.5rem;
 }
+
+// ---------------------------MEDIA
+
+@media (max-width: $PAD) {
+  .wrapper {
+    margin-bottom: 2.75rem;
+  }
+ }

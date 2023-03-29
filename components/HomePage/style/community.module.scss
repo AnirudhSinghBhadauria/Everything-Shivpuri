@@ -11,7 +11,6 @@
     gap: 2rem;
 
     h2 {
-      font-size: clamp(1.25rem, 2.5vw, 2rem);
       font-size: 2.3rem;
       color: black;
     }
@@ -29,6 +28,86 @@
         width: 1.8rem;
         height: 1.8rem;
       }
+    }
+  }
+}
+
+// ------------------------------------MEDIA
+
+@media (max-width: $PAD) {
+  .container {
+    section {
+      gap: 1.25rem;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        max-width: 21rem;
+        font-size: 0.975rem;
+        line-height: 1.2rem;
+      }
+    }
+
+    img {
+      width: 280px;
+      height: 280px;
+    }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .container {
+    @include flex(column-reverse, space-evenly, center);
+    gap: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.5rem 1.75rem 1.5rem 1.75rem;
+
+    section {
+      gap: 1.35rem;
+
+      h2 {
+        font-size: 2.35rem;
+      }
+
+      p {
+        max-width: 21rem;
+        font-size: 0.975rem;
+        line-height: 1.2rem;
+      }
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+
+@media (max-width: $MOBILE) {
+  .container {
+    padding: 0.5rem 1.25rem 1.25rem 1.25rem;
+    width: 100%;
+
+    section {
+
+      h2 {
+        font-size: clamp(1.75rem, 2.5vw, 2rem);
+      }
+
+      p {
+        text-align: center;
+        font-size: 0.875rem;
+        line-height: 1.145rem;
+      }
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
     }
   }
 }
