@@ -27,9 +27,21 @@
     padding: 0.5rem 1.5rem;
     font-size: 0.65rem;
   }
+
+  &:nth-of-type(3) {
+    display: none;
+  }
 }
 
 // ---------------------------------------MEDIA
+
+@media (max-width: $TABLET) {
+  .cardWrapper {
+    &:nth-of-type(3) {
+      display: flex;
+    }
+  }
+}
 
 @media (max-width: $MOBILE) {
   .cardWrapper {

@@ -1,8 +1,5 @@
-import React from "react";
-import {
-  RegularMedium,
-  RegularBold,
-} from "../../assets/Fonts/fonts";
+import React, { useContext } from "react";
+import { RegularMedium, RegularBold } from "../../assets/Fonts/fonts";
 import classes from "./style/line.module.scss";
 import ButtonLink from "../Helper/ButtonLink";
 

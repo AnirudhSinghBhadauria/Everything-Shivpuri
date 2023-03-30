@@ -25,6 +25,8 @@
   }
 }
 
+// --------------------------------------MEDIA
+
 @media (max-width: $SCREEN) {
   .wrapper {
     .main {
@@ -43,6 +45,19 @@
   .wrapper {
     .main {
       padding: 0.5rem clamp(1rem, 2vw, 1.5rem);
+    }
+
+    .bottomBar {
+      @include flex(row, center, flex-end);
+      padding: 0.75rem 1rem;
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .wrapper {
+    .main {
+      padding: 0.5rem clamp(0.875rem, 1.75vw, 1.25rem);
     }
 
     .bottomBar {

@@ -31,3 +31,57 @@
     }
   }
 }
+
+// ---------------------------------MEDIA
+
+@media (max-width: $PAD) {
+  .container {
+    img {
+      width: 397.5px;
+      height: 250px;
+    }
+
+    section {
+      gap: 1.5rem;
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      .button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .container {
+    @include flex(column-reverse, space-evenly, center);
+    gap: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
+    width: min-content;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .container {
+    @include flex(column-reverse, space-evenly, center);
+    gap: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
+    width: 95%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    section {
+      h2 {
+        font-size: 1.55rem;
+      }
+    }
+  }
+}

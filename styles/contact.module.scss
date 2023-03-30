@@ -13,7 +13,7 @@
     font-size: 5.5rem;
     text-align: center;
     letter-spacing: 0.1rem;
-    word-spacing: 1rem;
+    word-spacing: 0.25rem;
     margin-bottom: 0.5rem;
 
     span {
@@ -37,10 +37,14 @@
     @include flex(column, flex-end, flex-end);
     gap: 1.75rem;
     margin-block: 2rem;
+    width: 100%;
+
 
     textarea {
-      max-width: 44rem;
-      min-width: 44rem;
+      max-width: 70%;
+      width: 70%;
+      margin: 0 auto;
+
       min-height: 10rem;
       letter-spacing: 0.02rem;
 
@@ -49,7 +53,6 @@
       border: 1px solid $dark-accent;
       font-size: 1.1rem;
       color: $light-accent;
-
       border-radius: 0.5rem;
     }
 
@@ -61,10 +64,34 @@
       font-size: 1.1rem;
       border-radius: 0.5rem;
       transition: background-color 400ms linear;
+      margin-right: 15%;
 
       &:hover {
         background-color: #bfdfc2da;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+
+// -----------------------MEDIA 
+
+@media (max-width: $PAD) {
+  .contact {
+    p {
+      width: 80%;
+    }
+
+    form {
+      textarea {
+        max-width: 80%;
+        width: 80%;
+        padding: 1rem;
+      }
+
+      button {
+        margin-right: 10%;
       }
     }
   }

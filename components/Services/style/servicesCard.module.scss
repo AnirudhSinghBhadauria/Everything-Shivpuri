@@ -67,3 +67,110 @@
     }
   }
 }
+
+// ------------------------------------MEDIA
+
+@media (max-width: $SCREEN) {
+  .card {
+    width: 25.75rem;
+    margin: 0.975rem;
+
+    div {
+      gap: 2.25rem;
+    }
+  }
+}
+
+@media (max-width: $PAD) {
+  .card {
+    width: 21.5rem;
+    height: 19.75rem;
+    margin: 0.5rem;
+
+    .imageContainer {
+      height: 12.5rem;
+    }
+
+    div {
+      gap: 1.975rem;
+
+      .headingContainer {
+        h2 {
+          font-size: 1.4rem;
+          letter-spacing: 0.04rem;
+        }
+        svg {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+
+      .button {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .card {
+    width: 24.5rem;
+    height: 21rem;
+    margin: 0.5rem;
+
+    .imageContainer {
+      height: 13.5rem;
+    }
+
+    div {
+      gap: 1.975rem;
+
+      .headingContainer {
+        h2 {
+          font-size: 1.4rem;
+          letter-spacing: 0.04rem;
+        }
+      }
+
+      .button {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .card {
+    width: 24.5rem;
+    height: 19.3rem;
+    margin: 0.5rem;
+    background-color: #28292a;
+
+    .imageContainer {
+      height: 12.5rem;
+    }
+
+    div {
+      gap: 1.6rem;
+      margin: 0 auto;
+
+      .headingContainer {
+        h2 {
+          font-size: 1.25rem;
+          letter-spacing: 0.06rem;
+        }
+        svg {
+          width: 0.975rem;
+          height: 0.975rem;
+        }
+      }
+
+      .button {
+        padding: 0.5rem 1rem;
+        font-size: 0.65rem;
+      }
+    }
+  }
+}

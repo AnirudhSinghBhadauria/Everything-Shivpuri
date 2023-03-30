@@ -9,6 +9,7 @@ const ButtonLink = (props) => {
         href={props.href}
         aria-label={props.label}
         target={props.target}
+        onClick={props.onClick}
       >
         {props.children}
       </Link>

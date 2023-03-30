@@ -5,3 +5,11 @@
   flex-wrap: wrap;
   padding: 1.45rem 0rem;
 }
+
+// ---------------------------------MEDIA
+
+@media (max-width: $MOBILE) {
+  .serviceContainer {
+    padding: 1rem 0rem;
+  }
+}

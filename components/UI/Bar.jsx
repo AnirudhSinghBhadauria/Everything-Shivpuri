@@ -36,7 +36,6 @@ const Bar = () => {
 
   return (
     <section className={`${classes.bar} ${barClasses}`}>
-      {/* <ES fill="white" /> */}
       <LineCard
         title="About"
         message="Know more about us."
@@ -48,6 +47,12 @@ const Bar = () => {
         message="Good to Know things."
         href="/Genral"
         label="General"
+      />
+      <LineCard
+        title="Tourist"
+        message="Are you a Tourist ?"
+        href="/Tourist"
+        label="tourist"
       />
       <LineCard
         title="Essentials"

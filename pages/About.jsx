@@ -16,7 +16,7 @@ const About = () => {
 
       <div>
         <p className={`${RegularSemiBold.className} ${classes.content}`}>
-          Welcome to Everything Shivpuri,created by a team of talented students
+          Welcome to Everything Shivpuri, created by a team of talented students
           from UIT RGPV Shivpuri as a minor project. Our team includes Anirudh
           Singh Bhadauria (Developer - UI/UX), Abhyuday Sharma (Graphics),
           Aditya Tripathi (Graphics), and Ishank Rajiv Pathak (Documentation).{" "}
@@ -57,9 +57,6 @@ const About = () => {
           Contact
         </ButtonLink>
       </div>
-      <p className={`${RegularSemiBold.className} ${classes.everything}`}>
-        everything.shivpuri
-      </p>
     </section>
   );
 };

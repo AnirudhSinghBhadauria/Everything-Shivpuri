@@ -14,7 +14,7 @@ const IntroSection = ({ background, color, heading, desc }) => {
       <Image priority src={background} fill alt='background-image' />
       <div>
         <h1 className={Regular.className}>{heading}</h1>
-        <p className={RegularMedium.className}>{desc}</p>
+        <p className={RegularSemiBold.className}>{desc}</p>
         <span className={RegularSemiBold.className}>everything.shivpuri</span>
       </div>
     </section>
