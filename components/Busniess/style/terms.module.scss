@@ -1,7 +1,6 @@
 @import "../../../assets/base.scss";
 
 .container {
-  // background-color: white;
   padding: 2rem;
   width: 95%;
   border-radius: 0.75rem;
@@ -20,7 +19,7 @@
     text-align: left;
     margin-bottom: 1rem;
 
-    span{
+    span {
       color: $yellow-accent;
     }
   }
@@ -30,21 +29,59 @@
     max-width: 90%;
     line-height: 1.45rem;
   }
-  .contact{
-     color: $yellow-accent;
-     padding: 0.5rem 2rem;
-     border-radius: 0.5rem;
-     margin-top: 1rem;
-     border: 1px solid $dark-accent;
-     transition: border 200ms ease-in-out;
+  .contact {
+    color: $yellow-accent;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid $dark-accent;
+    transition: border 200ms ease-in-out;
 
-     &:hover {
+    &:hover {
       border: 1px solid $yellow-accent;
-     }
+    }
   }
-  img{
-     position: absolute;
-     bottom: 1rem;
-     right: 1rem;
+  img {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+// ---------------------------MEDIA
+
+@media (max-width: $TABLET) {
+  .container {
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      padding-left: 1rem;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .container {
+    border: 0;
+    padding: 1rem;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      max-width: 100%;
+      padding-left: 0rem;
+    }
   }
 }

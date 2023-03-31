@@ -7,8 +7,8 @@
 
   div {
     @include flex(column, space-evenly, flex-start);
+    padding: 1.5rem clamp(2.25rem, 4.5vw, 3.875rem);
     border-radius: 1rem;
-    padding: 1.5rem 4rem;
     color: #606060;
     gap: 1rem;
 
@@ -29,10 +29,6 @@
       max-width: 90%;
     }
 
-    svg {
-      margin-bottom: 0.5rem;
-    }
-
     ul {
       padding-left: 5rem;
       padding-top: 1.5rem;
@@ -48,15 +44,117 @@
       }
     }
     .gradinetSection {
+      padding: 1.75rem;
+      font-size: 1.15rem;
       margin-bottom: 1rem;
       background: $gradient-yellow;
       border-radius: 0.5rem;
       color: #2e2e2e;
       width: 100%;
       text-align: left;
-      padding: 1.75rem;
-      font-size: 1.15rem;
       line-height: 1.5rem;
+    }
+  }
+}
+
+// -------------------------------MEDIA
+
+@media (max-width: $SCREEN) {
+  .container {
+    div {
+      padding: 1.5rem 3rem;
+
+      h1 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        max-width: 95%;
+      }
+
+      img {
+        width: 105px;
+        height: 90px;
+      }
+
+      ul {
+        padding-left: 4rem;
+        padding-top: 1.35rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $PAD) {
+  .container {
+    div {
+      padding: 1.5rem 2.75rem;
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        max-width: 100%;
+      }
+
+      .gradinetSection {
+        padding: 1.25rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .container {
+    padding: 1rem 1rem;
+    div {
+      padding: 1.5rem 0.5rem;
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        max-width: 100%;
+      }
+
+      img {
+        width: 94.4px;
+        height: 80px;
+      }
+
+      ul {
+        padding-left: 2.5rem;
+        padding-top: 1.35rem;
+
+        li {
+          max-width: 85%;
+        }
+      }
+
+      .gradinetSection {
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.45rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .container {
+    padding: 1rem 0rem;
+
+    div {
+      padding: 1.5rem 0.75rem;
+
+      ul {
+        padding-left: 2.35rem;
+        padding-top: 1.35rem;
+
+        li {
+          max-width: 95%;
+        }
+      }
     }
   }
 }

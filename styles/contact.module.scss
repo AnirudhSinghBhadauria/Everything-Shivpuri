@@ -10,8 +10,8 @@
 
   .heading {
     color: $light-accent;
-    font-size: 5.5rem;
     text-align: center;
+    font-size: 5.5rem;
     letter-spacing: 0.1rem;
     word-spacing: 0.25rem;
     margin-bottom: 0.5rem;
@@ -39,7 +39,6 @@
     margin-block: 2rem;
     width: 100%;
 
-
     textarea {
       max-width: 70%;
       width: 70%;
@@ -47,21 +46,22 @@
 
       min-height: 10rem;
       letter-spacing: 0.02rem;
+      font-size: 1.1rem;
 
       padding: 2.5rem;
       background-color: $primary-background;
       border: 1px solid $dark-accent;
-      font-size: 1.1rem;
       color: $light-accent;
       border-radius: 0.5rem;
     }
 
     button {
       padding: 0.75rem 3rem;
+      font-size: 1.1rem;
+
       border: 1px solid $dark-accent;
       color: black;
       background-color: #c1dfc4;
-      font-size: 1.1rem;
       border-radius: 0.5rem;
       transition: background-color 400ms linear;
       margin-right: 15%;
@@ -74,8 +74,7 @@
   }
 }
 
-
-// -----------------------MEDIA 
+// -----------------------MEDIA
 
 @media (max-width: $PAD) {
   .contact {
@@ -84,14 +83,94 @@
     }
 
     form {
+      margin-block: 1rem;
+
       textarea {
         max-width: 80%;
         width: 80%;
         padding: 1rem;
+
+        letter-spacing: 0.02rem;
+        font-size: 1rem;
       }
 
       button {
         margin-right: 10%;
+      }
+    }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .contact {
+    padding: 3rem 1.5rem 3rem 1.5rem;
+
+    .heading {
+      font-size: 4rem;
+      letter-spacing: 0.1rem;
+      word-spacing: 0.25rem;
+    }
+
+    p {
+      width: 95%;
+    }
+
+    form {
+      margin-block: 0.5rem;
+
+      textarea {
+        max-width: 90%;
+        width: 90%;
+        padding: 1rem;
+        border: 2px solid $dark-accent;
+
+        letter-spacing: 0.02rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+
+        min-height: 15rem;
+      }
+
+      button {
+        margin-right: 2.5%;
+        padding: 0.5rem 2rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .contact {
+    padding: 3rem 0.25rem 3rem 0.25rem;
+
+    .heading {
+      font-size: 3.875rem;
+      letter-spacing: 0.1rem;
+      word-spacing: 0.25rem;
+      margin-bottom: 0rem;
+    }
+
+    form {
+      margin-block: 0.5rem;
+
+      textarea {
+        max-width: 100%;
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid $dark-accent;
+
+        letter-spacing: 0.02rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+
+        min-height: 15rem;
+      }
+
+      button {
+        margin-right: 0%;
+        padding: 0.5rem 2rem;
+        font-size: 1.1rem;
       }
     }
   }

@@ -14,7 +14,8 @@ const BusniessText = () => {
       <div>
         <Image src={curlyLines} alt="curlyLines" width="117" height="100" />
         <h1 className={RegularSemiBold.className}>
-          <span className={classes.add}>Add businesses</span> to Everything Shivpuri
+          <span className={classes.add}>Add businesses</span> to Everything
+          Shivpuri
         </h1>
         <p className={RegularMedium.className}>
           Welcome to our <strong> 'Add Business' </strong> section, where
@@ -39,7 +40,7 @@ const BusniessText = () => {
         <ul className={RegularMedium.className}>
           <li>
             <p>
-              Name of the busniess or place must be of
+              Name of the busniess or place must be of&nbsp;
               <strong>atleast 3 characters</strong> and&nbsp;
               <strong>at max 20 characters are allowed.</strong>
             </p>
@@ -55,9 +56,7 @@ const BusniessText = () => {
             <p>
               <strong> Phone Number must be a Indian Phone Number. </strong>It
               should have
-              <strong>
-                atleast 10 digits and can have max 15 digits.
-              </strong>
+              <strong>atleast 10 digits and can have max 15 digits.&nbsp;</strong>
               Number may or may not start with 0.
             </p>
           </li>
@@ -73,7 +72,7 @@ const BusniessText = () => {
           The purpose of this section is to make it easy for businesses to
           promote themselves on <strong>Everything Shivpuri</strong> and for
           users to find the businesses they need. Fill out the following form
-          carefully.{" "}
+          carefully.
           <strong>
             Share all the required information in correct format and click on
             'Add Business'.
