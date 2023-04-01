@@ -156,6 +156,7 @@ const AddYourBusniess = () => {
           //----ERROR
           messageHandeler({ value: "Image Upload Failed.", status: "error" });
           dispatch({ type: "DISS", payload: false });
+          console.log(error);
 
           return;
         },
