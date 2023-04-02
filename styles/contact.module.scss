@@ -35,11 +35,19 @@
 
   form {
     @include flex(column, flex-end, flex-end);
-    gap: 1.75rem;
-    margin-block: 2rem;
+    gap: 1.25rem;
     width: 100%;
 
+    label {
+      color: $light-accent;
+      font-size: 1.1rem;
+      letter-spacing: 0.02rem;
+      text-align: left;
+      width: 85%;
+    }
+
     textarea {
+      min-width: 70%;
       max-width: 70%;
       width: 70%;
       margin: 0 auto;
@@ -83,10 +91,15 @@
     }
 
     form {
-      margin-block: 1rem;
+      label {
+        letter-spacing: 0.02rem;
+        font-size: 1rem;
+        width: 90%;
+      }
 
       textarea {
         max-width: 80%;
+        min-width: 80%;
         width: 80%;
         padding: 1rem;
 
@@ -116,11 +129,14 @@
     }
 
     form {
-      margin-block: 0.5rem;
+      label {
+        width: 98%;
+      }
 
       textarea {
-        max-width: 90%;
-        width: 90%;
+        max-width: 95%;
+        min-width: 95%;
+        width: 95%;
         padding: 1rem;
         border: 2px solid $dark-accent;
 
@@ -140,7 +156,7 @@
   }
 }
 
-@media (max-width: $TABLET) {
+@media (max-width: $MOBILE) {
   .contact {
     padding: 3rem 0.25rem 3rem 0.25rem;
 
@@ -152,10 +168,12 @@
     }
 
     form {
-      margin-block: 0.5rem;
-
+      label {
+        width: 100%;
+      }
       textarea {
         max-width: 100%;
+        min-width: 100%;
         width: 100%;
         padding: 1rem;
         border: 1px solid $dark-accent;

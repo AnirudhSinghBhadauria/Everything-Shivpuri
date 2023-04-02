@@ -19,6 +19,7 @@ import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import React, { useContext, useReducer, Fragment, useEffect } from "react";
 import { busniessReducer, INITIAL_STATE } from "../Reducer/addBusniess";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import HeadContent from "components/Helper/HeadContent";
 
 
 const formatFileSize = function (bytes) {
@@ -259,6 +260,9 @@ const AddYourBusniess = () => {
 
   return (
     <Fragment>
+
+<HeadContent title='Add Businesses' content='Welcome to the Add Businesses page on Everything Shivpuri! Here, you can easily add your business to our comprehensive directory of services and establishments in the city. By adding your business, you will be able to reach a wider audience and promote your services to potential customers. Our user-friendly interface makes it easy to add all the important details about your business, including location, contact information, and a brief description. Start promoting your business today by adding it to our directory!' />
+
       <BusniessText />
 
       <section className={classes.container}>
@@ -271,6 +275,7 @@ const AddYourBusniess = () => {
             phone={phone}
             location={location}
             href={``}
+            className={classes.business}
           />
           <section className={classes.bottomCard}>
             <p className={RegularMedium.className}>
@@ -325,14 +330,14 @@ const AddYourBusniess = () => {
 
           <div className={`${RegularSemiBold.className} ${classes.group}`}>
             <input
-              htmlFor="phone"
+              id="phone"
               onChange={phoneHandeler}
               type="number"
               maxLength="15"
               autoComplete="off"
               required
             ></input>
-            <label id="phone" className={classes.label} htmlFor="phone">
+            <label className={classes.label} htmlFor="phone">
               Phone
             </label>
           </div>

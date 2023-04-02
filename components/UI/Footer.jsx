@@ -27,7 +27,7 @@ const Footer = () => {
       <section className={classes.container}>
         <div className={classes.topSection}>
           <section>
-            <ButtonLink href="/" name="home">
+            <ButtonLink aria='home' href="/" label='home' name="home">
               <ES fill="#d0d0d0" />
             </ButtonLink>
             <p className={RegularMedium.className}>

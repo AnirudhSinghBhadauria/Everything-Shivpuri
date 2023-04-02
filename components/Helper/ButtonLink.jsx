@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ButtonLink = (props) => {
   return (
-    <button className="button-help" type={props.type}>
+    <button className="button-help" aria-label={props.aria} type={props.type}>
       <Link
         className={`helper-link ${props.className}`}
         href={props.href}

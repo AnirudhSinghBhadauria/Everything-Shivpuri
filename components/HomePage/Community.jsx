@@ -22,13 +22,13 @@ const Community = () => {
           with the latest news and events.
         </p>
         <div className={classes.socialMedia}>
-          <ButtonLink href={twitter} name="Twitter">
+          <ButtonLink aria='twitter' label='twitter' href={twitter} name="Twitter">
             <Twitter />
           </ButtonLink>
-          <ButtonLink href={instagram} name="Instagram">
+          <ButtonLink aria='Instagram' label='Instagram' href={instagram} name="Instagram">
             <Instagram />
           </ButtonLink>
-          <ButtonLink href={facebook} name="Facebook">
+          <ButtonLink aria='Facebook' label='Facebook' href={facebook} name="Facebook">
             <Facebook />
           </ButtonLink>
         </div>

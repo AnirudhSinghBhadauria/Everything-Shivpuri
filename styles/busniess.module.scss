@@ -248,6 +248,13 @@
 
 @media (max-width: $MOBILE) {
   .container {
+
+    .left {
+      .business {
+        width: 98%;
+      }
+    }
+
     form {
       gap: 1.5rem;
       padding: 1rem clamp(1rem, 2vw, 1.5rem);

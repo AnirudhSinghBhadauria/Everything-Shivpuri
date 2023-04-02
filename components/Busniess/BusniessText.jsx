@@ -12,7 +12,7 @@ const BusniessText = () => {
   return (
     <section className={classes.container}>
       <div>
-        <Image src={curlyLines} alt="curlyLines" width="117" height="100" />
+        <Image src={curlyLines} alt="curlyLines" width="113" height="100" />
         <h1 className={RegularSemiBold.className}>
           <span className={classes.add}>Add businesses</span> to Everything
           Shivpuri

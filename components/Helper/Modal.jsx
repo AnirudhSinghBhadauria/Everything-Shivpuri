@@ -25,7 +25,14 @@ const ModalStructure = (props) => {
     <section className={`${classes.modalContainer} ${theme}`}>
       <div className={classes.modal}>
         <p className={RegularMedium.className}>{message}</p>
-        <button onClick={modalCloseHandeler} className={classes.close}>
+        <button
+          name="Modal-Close-Handeler"
+          type="button"
+          role="button"
+          aria-label="close-button"
+          onClick={modalCloseHandeler}
+          className={classes.close}
+        >
           {status === "loading" ? <Spinner /> : <Close />}
         </button>
       </div>

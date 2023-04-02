@@ -11,6 +11,8 @@ export default function App({ Component, pageProps }) {
         <title>Everything Shivpuri</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://securetoken.googleapis.com" />
+        <link rel="preconnect" href="https://identitytoolkit.googleapis.com" />
       </Head>
 
       <AppContextProvider>
@@ -18,7 +20,6 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
         </Layout>
       </AppContextProvider>
-      
     </Fragment>
   );
 }

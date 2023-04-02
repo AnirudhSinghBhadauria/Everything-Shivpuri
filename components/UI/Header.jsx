@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <nav className={classes.navWrapper}>
-      <Link className={classes.ESContainer} href="/">
+      <Link aria-label="home" className={classes.ESContainer} href="/">
         <ES className={classes.ES} fill="white" />
       </Link>
 
@@ -42,6 +42,7 @@ const Header = () => {
       <section className={classes.rightHeader}>
         {!curruntUser ? (
           <Link
+          aria-label="login"
             className={RegularMedium.className}
             href="#"
             onClick={signinWithGoogle}
@@ -60,7 +61,7 @@ const Header = () => {
         )}
 
         <div className={classes.line}></div>
-        <Link href="/Contact" className={classes.mailWrapper}>
+        <Link href="/Contact" aria-label="contact"  className={classes.mailWrapper}>
           <Mail />
         </Link>
 
