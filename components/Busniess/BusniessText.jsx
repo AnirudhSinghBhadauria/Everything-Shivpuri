@@ -56,7 +56,9 @@ const BusniessText = () => {
             <p>
               <strong> Phone Number must be a Indian Phone Number. </strong>It
               should have
-              <strong>atleast 10 digits and can have max 15 digits.&nbsp;</strong>
+              <strong>
+                atleast 10 digits and can have max 15 digits.&nbsp;
+              </strong>
               Number may or may not start with 0.
             </p>
           </li>
@@ -68,7 +70,8 @@ const BusniessText = () => {
             </p>
           </li>
         </ul>
-        <p className={`${RegularMedium.className} ${classes.gradinetSection}`}>
+        <p className={`${RegularMedium.className} ${classes.gradinetSection}`}
+        >
           The purpose of this section is to make it easy for businesses to
           promote themselves on <strong>Everything Shivpuri</strong> and for
           users to find the businesses they need. Fill out the following form

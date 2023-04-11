@@ -8,10 +8,17 @@ import ButtonLink from "components/Helper/ButtonLink";
 import React from "react";
 import classes from "./style/terms.module.scss";
 import Image from "next/image";
+import {motion} from 'framer-motion'
 
 const Terms = () => {
   return (
-    <div className={classes.container}>
+    <motion.div
+      initial={{ opacity: 0.5, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ ease: "easeIn" }}
+      viewport={{once: true}}
+      className={classes.container}
+    >
       <h2 className={RegularBold.className}>
         Terms & <span>Conditions</span>
       </h2>
@@ -43,7 +50,7 @@ const Terms = () => {
       </ButtonLink>
 
       <Image src={smily} alt="smily" width="80" height="80" />
-    </div>
+    </motion.div>
   );
 };
 

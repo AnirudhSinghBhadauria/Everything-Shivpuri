@@ -6,10 +6,10 @@ import {motion} from 'framer-motion'
 const TextContnet = () => {
   return (
     <motion.section
-      initial={{ y: 50 }}
-      whileInView={{ y: 0 }}
+      initial={{ opacity: 0.5, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ ease: "easeIn" }}
       viewport={{ once: true }}
-      transition={{ duration: 0.25, type: "spring", stiffness: 120 }}
       className={classes.wrapper}
     >
       <Description

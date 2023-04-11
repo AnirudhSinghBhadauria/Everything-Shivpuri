@@ -20,8 +20,8 @@ import React, { useContext, useReducer, Fragment } from "react";
 import { busniessReducer, INITIAL_STATE } from "../Reducer/addBusniess";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import HeadContent from "components/Helper/HeadContent";
-import {motion} from 'framer-motion'
- 
+import { motion } from "framer-motion";
+
 const formatFileSize = function (bytes) {
   const sufixes = ["B", "kB", "MB", "GB", "TB"];
   const i = Math.floor(Math.log(bytes) / Math.log(1024));
@@ -264,6 +264,7 @@ const AddYourBusniess = () => {
       initial={{ opacity: 0.5, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0.5, y: 10 }}
+      viewport={{ once: true }}
     >
       <HeadContent
         title="Add Businesses"
@@ -272,7 +273,13 @@ const AddYourBusniess = () => {
 
       <BusniessText />
 
-      <section className={classes.container}>
+      <motion.section
+        initial={{ opacity: 0.5, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeIn" }}
+        viewport={{ once: true }}
+        className={classes.container}
+      >
         <div className={classes.left}>
           <ServicesCard
             name={name}
@@ -383,7 +390,7 @@ const AddYourBusniess = () => {
             Add Busniess
           </button>
         </form>
-      </section>
+      </motion.section>
       <Terms />
     </motion.div>
   );
