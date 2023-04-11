@@ -5,12 +5,20 @@ import Image from "next/image";
 import Zigzag from "assets/svg/Zigzag";
 import Rings from "assets/svg/Rings";
 import { appContext } from "store/AppContextProvider";
+import { motion } from "framer-motion";
 
 const Content = () => {
   const { curruntUser } = useContext(appContext);
 
   return (
-    <section id="category" className={classes.wrapper}>
+    <motion.section
+      initial={{ y: 50 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true }}
+      transition={{duration: 0.25, type: 'spring', stiffness: 120}}
+      id="category"
+      className={classes.wrapper}
+    >
       <Cards
         ifLogged={true}
         title="GENERAL"
@@ -39,9 +47,9 @@ const Content = () => {
         title="ESSENTIALS"
         href="/Essentials"
         label="daily needs"
-        style={{ 
-         zIndex: 3
-         }}
+        style={{
+          zIndex: 3,
+        }}
       />
       <Cards
         ifLogged={true}
@@ -67,7 +75,7 @@ const Content = () => {
       />
       <Zigzag className={classes.zigzag} />
       <Rings className={classes.rings} />
-    </section>
+    </motion.section>
   );
 };
 

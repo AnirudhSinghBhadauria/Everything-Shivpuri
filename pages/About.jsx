@@ -7,10 +7,16 @@ import ButtonLink from "components/Helper/ButtonLink";
 import React from "react";
 import classes from "../styles/about.module.scss";
 import HeadContent from "components/Helper/HeadContent";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className={classes.about}>
+    <motion.section
+      initial={{ opacity: 0.5, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0.5, y: 10 }}
+      className={classes.about}
+    >
       <HeadContent
         title="About"
         content="Welcome to the About Us page for Everything Shivpuri! Here, you can learn more about our team and our mission to provide you with the best information and resources about Shivpuri. Our dedicated team of writers and researchers are passionate about sharing the rich history, culture, and natural beauty of this amazing city with our readers. Discover the story behind our Everything Shivpuri and the people who make it all happen."
@@ -63,7 +69,7 @@ const About = () => {
           Contact
         </ButtonLink>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

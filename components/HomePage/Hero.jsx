@@ -20,9 +20,9 @@ import {
   NOBG,
   weather,
 } from "../../assets/Linkage";
+import { motion } from "framer-motion";
 
-const Hero = ({ temperature }) => {
-  console.log(temperature);
+const Hero = ({ temp }) => {
   return (
     <section className={classes.wrapper}>
       <section className={classes.topSection}>
@@ -64,7 +64,7 @@ const Hero = ({ temperature }) => {
               width="250"
               height="250"
               alt="chatri"
-              priority
+              priority="true"
             />
             <h2 className={RegularBold.className}>CULTURAL HERITAGE</h2>
           </div>
@@ -96,7 +96,7 @@ const Hero = ({ temperature }) => {
                 Weather Forecast
               </ButtonLink>
               <h1 className={Regular.className}>
-                {`${"30"}`}
+                {`${temp}`}
                 <sup>.</sup>
               </h1>
             </section>
@@ -145,19 +145,3 @@ const Hero = ({ temperature }) => {
 };
 
 export default Hero;
-
-export async function getStaticProps(context) {
-  const response = await fetch(
-    "https://api.openweathermap.org/data/2.5/weather?lat=25.53&lon=77.72&appid=dd96dd6f7380ae41ed9106d253aecb4e"
-  );
-
-  const data = response.json();
-
-  console.log(data);
-
-  return {
-    props: {
-      temperature : Math.floor(data.main.temp - 273.3)
-    }
-  }
-}

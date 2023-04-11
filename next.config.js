@@ -10,6 +10,8 @@ const nextConfig = {
     FIREBASE_storageBucket: "everything-shivpuri-c7a4f.appspot.com",
     FIREBASE_messagingSenderId: "1027804056854",
     FIREBASE_appId: "1:1027804056854:web:0995f75e3a387b1c83d437",
+
+    OPEN_WEATHER: "dd96dd6f7380ae41ed9106d253aecb4e", 
   },
 };
 

@@ -16,12 +16,12 @@ import { appContext } from "store/AppContextProvider";
 import BusniessText from "components/Busniess/BusniessText";
 import ServicesCard from "../components/Services/ServicesCard";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
-import React, { useContext, useReducer, Fragment, useEffect } from "react";
+import React, { useContext, useReducer, Fragment } from "react";
 import { busniessReducer, INITIAL_STATE } from "../Reducer/addBusniess";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import HeadContent from "components/Helper/HeadContent";
-
-
+import {motion} from 'framer-motion'
+ 
 const formatFileSize = function (bytes) {
   const sufixes = ["B", "kB", "MB", "GB", "TB"];
   const i = Math.floor(Math.log(bytes) / Math.log(1024));
@@ -32,6 +32,7 @@ const AddYourBusniess = () => {
   const { push } = useRouter();
   const { messageHandeler, curruntUser } = useContext(appContext);
   const [state, dispatch] = useReducer(busniessReducer, INITIAL_STATE);
+
   const {
     name,
     phone,
@@ -259,9 +260,15 @@ const AddYourBusniess = () => {
   imgSrc === "" && dispatch({ type: "IMG-SRC", payload: es });
 
   return (
-    <Fragment>
-
-<HeadContent title='Add Businesses' content='Welcome to the Add Businesses page on Everything Shivpuri! Here, you can easily add your business to our comprehensive directory of services and establishments in the city. By adding your business, you will be able to reach a wider audience and promote your services to potential customers. Our user-friendly interface makes it easy to add all the important details about your business, including location, contact information, and a brief description. Start promoting your business today by adding it to our directory!' />
+    <motion.div
+      initial={{ opacity: 0.5, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0.5, y: 10 }}
+    >
+      <HeadContent
+        title="Add Businesses"
+        content="Welcome to the Add Businesses page on Everything Shivpuri! Here, you can easily add your business to our comprehensive directory of services and establishments in the city. By adding your business, you will be able to reach a wider audience and promote your services to potential customers. Our user-friendly interface makes it easy to add all the important details about your business, including location, contact information, and a brief description. Start promoting your business today by adding it to our directory!"
+      />
 
       <BusniessText />
 
@@ -378,7 +385,7 @@ const AddYourBusniess = () => {
         </form>
       </section>
       <Terms />
-    </Fragment>
+    </motion.div>
   );
 };
 

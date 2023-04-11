@@ -5,6 +5,7 @@ import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "../firebase";
 import { appContext } from "store/AppContextProvider";
 import HeadContent from "components/Helper/HeadContent";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [feedback, setFeedback] = useState("");
@@ -26,6 +27,7 @@ const Contact = () => {
       });
 
       messageHandeler({ status: "success", value: "Success, Thank you." });
+      setFeedback('');
       setDisabled(false);
     } catch (error) {
       messageHandeler({ status: "error", value: `${error.code}` });
@@ -34,7 +36,12 @@ const Contact = () => {
   };
 
   return (
-    <section className={classes.contact}>
+    <motion.section
+      initial={{ opacity: 0.5, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0.5, y: 10 }}
+      className={classes.contact}
+    >
       <HeadContent
         title="Contact"
         content="Welcome to the Contact Us page for Everything Shivpuri! We value your feedback and suggestions, so please feel free to reach out to our team using the contact form provided below. We are always looking for ways to improve our website and provide a better user experience, so dont hesitate to let us know how we can better serve you. Thank you for your support!"
@@ -76,6 +83,7 @@ const Contact = () => {
           onChange={changeHandeler}
           name="feedback"
           minLength="5"
+          value={feedback}
         ></textarea>
         <button disabled={disabled} className={RegularSemiBold.className}>
           Submit
@@ -87,7 +95,7 @@ const Contact = () => {
         everyone interested in Shivpuri. We appreciate your input and look
         forward to hearing from you.
       </p>
-    </section>
+    </motion.section>
   );
 };
 

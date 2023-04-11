@@ -7,6 +7,7 @@ import ButtonLink from "components/Helper/ButtonLink";
 import Image from "next/image";
 import React from "react";
 import classes from "./style/community.module.scss";
+import { motion } from "framer-motion";
 
 const Community = () => {
   const facebook = "https://www.facebook.com/dmshivpuri/";
@@ -14,7 +15,14 @@ const Community = () => {
   const instagram = "https://www.instagram.com/shivpurimpindia/?hl=en";
 
   return (
-    <div id="community" className={classes.container}>
+    <motion.div
+      initial={{ y: 50 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.25, type: "spring", stiffness: 120 }}
+      id="community"
+      className={classes.container}
+    >
       <section>
         <h2 className={RegularSemiBold.className}>Join Your Community.</h2>
         <p className={RegularMedium.className}>
@@ -22,19 +30,34 @@ const Community = () => {
           with the latest news and events.
         </p>
         <div className={classes.socialMedia}>
-          <ButtonLink aria='twitter' label='twitter' href={twitter} name="Twitter">
+          <ButtonLink
+            aria="twitter"
+            label="twitter"
+            href={twitter}
+            name="Twitter"
+          >
             <Twitter />
           </ButtonLink>
-          <ButtonLink aria='Instagram' label='Instagram' href={instagram} name="Instagram">
+          <ButtonLink
+            aria="Instagram"
+            label="Instagram"
+            href={instagram}
+            name="Instagram"
+          >
             <Instagram />
           </ButtonLink>
-          <ButtonLink aria='Facebook' label='Facebook' href={facebook} name="Facebook">
+          <ButtonLink
+            aria="Facebook"
+            label="Facebook"
+            href={facebook}
+            name="Facebook"
+          >
             <Facebook />
           </ButtonLink>
         </div>
       </section>
       <Image src={social} alt="social-media" width="300" height="300" />
-    </div>
+    </motion.div>
   );
 };
 

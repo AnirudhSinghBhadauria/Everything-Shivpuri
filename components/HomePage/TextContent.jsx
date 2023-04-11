@@ -1,10 +1,17 @@
 import React from "react";
 import Description from "./Description";
 import classes from "./style/text.module.scss";
+import {motion} from 'framer-motion'
 
 const TextContnet = () => {
   return (
-    <section className={classes.wrapper}>
+    <motion.section
+      initial={{ y: 50 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.25, type: "spring", stiffness: 120 }}
+      className={classes.wrapper}
+    >
       <Description
         link
         label="GENRAL"
@@ -37,7 +44,7 @@ const TextContnet = () => {
         secondary="C.XXI S.XXXII"
         desc="Didn't Got what you were lookin for? Maybe we missed it, but don't worry you can add it yourself in Add Businesses, You must login first."
       />
-    </section>
+    </motion.section>
   );
 };
 

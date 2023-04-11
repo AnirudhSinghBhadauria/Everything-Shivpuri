@@ -106,14 +106,14 @@
           width: clamp(8.035rem, 16.135vw, 15.625rem);
           height: clamp(8.035rem, 16.135vw, 15.625rem);
           filter: contrast(90%) brightness(150%);
-          z-index: 1;
+          z-index: -10;
         }
 
         h2 {
           position: absolute;
           bottom: 1rem;
           font-size: clamp(1rem, 2.5vw, 2.5rem);
-          z-index: 0;
+          z-index: -20;
           color: $primary-blue;
           text-align: center;
         }
@@ -178,7 +178,7 @@
 
         &:hover {
           sup {
-            color: $primary-neon;
+            color: $primary-orange;
           }
         }
 
