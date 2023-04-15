@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+
+
 const nextConfig = {
   images: {
     domains: ["firebasestorage.googleapis.com", "lh3.googleusercontent.com"],
@@ -11,8 +13,19 @@ const nextConfig = {
     FIREBASE_messagingSenderId: "1027804056854",
     FIREBASE_appId: "1:1027804056854:web:0995f75e3a387b1c83d437",
 
-    OPEN_WEATHER: "dd96dd6f7380ae41ed9106d253aecb4e", 
+    OPEN_WEATHER: "dd96dd6f7380ae41ed9106d253aecb4e",
+  },
+
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV !== "development",
   },
 };
 
-module.exports = nextConfig;
+const withPWA = require("next-pwa")({
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
+  register: true,
+});
+
+module.exports = withPWA(nextConfig);
