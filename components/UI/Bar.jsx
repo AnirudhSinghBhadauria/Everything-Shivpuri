@@ -1,5 +1,4 @@
 import { RegularBold } from "assets/Fonts/fonts";
-import ES from "assets/svg/ES";
 import LineCard from "components/HomePage/LineCard";
 import Image from "next/image";
 import React, { useContext } from "react";

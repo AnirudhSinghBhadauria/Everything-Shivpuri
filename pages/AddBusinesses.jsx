@@ -312,6 +312,7 @@ const AddYourBusniess = () => {
             onChange={imageHandeler}
             id="picture"
             type="file"
+            accept="image/*"
             required
           />
 

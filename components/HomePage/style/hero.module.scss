@@ -18,7 +18,11 @@
       gap: 1rem;
       background-size: 400% 400%;
 
-      background: radial-gradient(circle at 10% 20%, rgb(226, 240, 254) 0%, rgb(255, 247, 228) 90%);
+      background: radial-gradient(
+        circle at 10% 20%,
+        rgb(226, 240, 254) 0%,
+        rgb(255, 247, 228) 90%
+      );
 
       animation: gradient 15s ease infinite;
 
@@ -33,14 +37,14 @@
           font-size: clamp(2.25rem, 4.5vw, 3.875rem);
           color: black;
           text-align: center;
-          filter:drop-shadow(0px 0px 80px rgb(255, 208, 99));
+          filter: drop-shadow(0px 0px 80px rgb(255, 208, 99));
         }
         p {
           text-align: center;
           color: black;
           font-size: 0.875rem;
           margin-top: 0.5rem;
-          filter:drop-shadow(0px 0px 10px rgb(255, 208, 99));
+          filter: drop-shadow(0px 0px 10px rgb(255, 208, 99));
         }
       }
 
@@ -53,11 +57,9 @@
           width: 24rem;
           height: 16.5rem;
           border-radius: 1rem;
-          // filter: contrast(115%) grayscale(40%);
           transition: all 350ms ease;
           object-fit: cover;
           object-position: left;
-          box-shadow: inset 0px 0px 51px 58px rgba(255, 255, 255, 1);
         }
       }
     }
@@ -488,11 +490,11 @@
         section:nth-of-type(1) {
           h1 {
             font-size: 2.15rem;
-          filter:drop-shadow(0px 0px 40px rgb(255, 208, 99));
-        }
-        p {
-          font-size: 0.8rem;
-          filter:drop-shadow(0px 0px 15px rgb(255, 208, 99));
+            filter: drop-shadow(0px 0px 40px rgb(255, 208, 99));
+          }
+          p {
+            font-size: 0.8rem;
+            filter: drop-shadow(0px 0px 15px rgb(255, 208, 99));
           }
         }
       }
