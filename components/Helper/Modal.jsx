@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import { createPortal } from "react-dom";
-import Close from "assets/svg/close";
+import Close from "assets/svg/Close";
 import classes from "./style/modal.module.scss";
 import { RegularMedium } from "assets/Fonts/fonts";
 import Spinner from "assets/svg/Spinner";
