@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import classes from "./style/content.module.scss";
 import Cards from "./Cards";
-import Image from "next/image";
 import Zigzag from "assets/svg/Zigzag";
 import Rings from "assets/svg/Rings";
 import { appContext } from "store/AppContextProvider";

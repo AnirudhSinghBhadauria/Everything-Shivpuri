@@ -1,12 +1,16 @@
 {
   "theme_color": "#ffffff",
-  "background_color": "#141414",
+  "background_color": "#f1ff70",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "name": "Everything Shivpuri",
-  "short_name": "everythingShivpuri",
+  "short_name": "Everything Shivpuri",
   "description": "Everything Shivpuri serves as a one-stop destination for all information related to the town of Shivpuri in Madhya Pradesh, India. It features various local businesses, including food shops, garment shops, and other services, making it easier for users to find what they need.",
+  "navigationColor": "#141414",
+  "navigationColorDark": "#141414",
+  "navigationDividerColor": "#141414",
+  "navigationDividerColorDark": "#141414",
   "icons": [
     {
       "src": "/icon-192x192.png",
