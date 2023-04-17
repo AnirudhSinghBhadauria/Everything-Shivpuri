@@ -7,6 +7,11 @@ import AppContextProvider from "../store/AppContextProvider";
 export default function App({ Component, pageProps }) {
   return (
     <Fragment>
+      <Head>
+      <title>Everything Shivpuri</title>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <AppContextProvider>
         <Layout>
           <Component {...pageProps} />

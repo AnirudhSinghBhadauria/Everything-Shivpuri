@@ -20,7 +20,6 @@ import {
   NOBG,
   weather,
 } from "../../assets/Linkage";
-import { motion } from "framer-motion";
 
 const Hero = ({ temp }) => {
   return (
