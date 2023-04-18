@@ -33,7 +33,7 @@ Everything Shivpuri has been developed as a Progressive Web App (PWA) using NEXT
 
 I just wanted to recommend checking out the gallery of 'Everything Shivpuri', which is a comprehensive guide to the town of Shivpuri in Madhya Pradesh, India. It's a great one-stop destination for all the information you need about local businesses, services, and attractions in Shivpuri. Whether you're looking for food shops, garment shops, or other resources, Everything Shivpuri got you covered.
 
-<a href="https://www.behance.net/gallery/168517879/Everything-Shivpuri">GALLERY ------></a>
+<a target='_blank' href="https://www.behance.net/gallery/168517879/Everything-Shivpuri">GALLERY ------></a>
 
 ## Login
 
