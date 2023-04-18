@@ -6,7 +6,7 @@ Everything Shivpuri serves as a one-stop destination for all information related
 
 <p float="left" align="center">
   <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/fbcb3b168517879.643e9c35a68eb.png" width="200" />
-  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/54fc25168517879.643e9c35985a4.jpg" width="200" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ccd4df168517879.643e9c359718c.png" width="200" />
   <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8cb2ba168517879.643e9c35a3ddd.png" width="200" />
   <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8ed2d9168517879.643e9ddd7c43c.jpg" width="200" />
 </p>
