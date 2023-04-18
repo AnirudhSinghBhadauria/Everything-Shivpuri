@@ -1,28 +1,27 @@
-# [Cosmosis](https://cosmosis.vercel.app/)
+# [Everything Shivpuri](https://everythingshivpuri.vercel.app/)
 
-Cosmosis is an exciting space-themed website that offers a wealth of information about space exploration and related topics. Visitors can explore the latest updates from organizations like ISRO, NASA, and Astronomy Picture of the Day (APOD). The website also features in-depth articles on the history of ISRO and many other exciting observations.
+Everything Shivpuri serves as a one-stop destination for all information related to the town of Shivpuri in Madhya Pradesh, India. It features various local businesses, including food shops, garment shops, and other services, making it easier for users to find what they need. Everything Shivpuri Comprehensive Guide to Local Opportunities and Resources.
 
-<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20-%20Google%20Chrome%2027.2.23%2001_36_46.png?alt=media&token=67ae21a2-cee9-4944-8720-0edc5eb1ac10"/> 
-  
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/e77e5e168517879.643c47c336755.png"/>
 
 <p float="left" align="center">
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012742.jpg?alt=media&token=e1378d25-64e4-4e07-a487-f44ae8d4811e" width="200" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012550.jpg?alt=media&token=796b02d2-80b7-427d-a2ff-62a7e3e7e14d" width="200" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012604.jpg?alt=media&token=fc686940-7fed-404a-b02b-41de7872fa2c" width="200" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012624.jpg?alt=media&token=1549ceef-04ae-4bbf-91c2-89a28c431f14" width="200" />
+  <img src="blob:https://www.behance.net/3c404569-d42a-46f8-9090-1c73cae834f5" width="200" />
+  <img src="blob:https://www.behance.net/a341a0d0-6da5-442f-8e1b-caf9a9d83b54" width="200" />
+  <img src="blob:https://www.behance.net/8a515b7f-461d-43b8-9f21-147b3bd375b2" width="200" />
+  <img src="blob:https://www.behance.net/93ed47c1-7323-4aed-b031-f478de7de8e0" width="200" />
 </p>
 
 ## Features
 
-- In-depth articles on the history of ISRO.
-- Updates and findings from the Mars rover Curiosity.
-- Latest update in form of APOD and KPOD.
-- Comprehensive coverage of space-related topics.
+- Comprehensive Guide to Local Opportunities and Resources.
+- Get to know about General Places and Commodities in Shivpuri.
+- Pure Tourist Guide to Shivpuri.
+- People can add their own business in 'Add Business' section.
 - Progressive Web App (PWA Cerified)
 
 ## PWA (Progressive Web App)
 
-Cosmosis has been developed as a Progressive Web App (PWA) using React. As a PWA, Cosmosis offers a fast and reliable browsing experience to its users, even in areas with poor network connectivity. It can be accessed from any device with a web browser, and **it offers an app-like experience** with features such as push notifications, offline support, and the ability to add to the home screen.
+Everything Shivpuri has been developed as a Progressive Web App (PWA) using NEXT. As a PWA, Everything Shivpuri offers a fast and reliable browsing experience to its users, even in areas with poor network connectivity. It can be accessed from any device with a web browser, and **it offers an app-like experience** with features such as push notifications, offline support, and the ability to add to the home screen.
 
 <p float="left" align="center">
   <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012405.jpg?alt=media&token=18b60495-4bcf-490b-a372-5e09d6b2265e" width="250" />
@@ -32,50 +31,56 @@ Cosmosis has been developed as a Progressive Web App (PWA) using React. As a PWA
 
 ## [Gallery](https://www.behance.net/gallery/164756167/Cosmosis)
 
-"Step into our cosmosis gallery and marvel at the beauty of the universe. Our collection showcases the vastness and diversity of space. Take your time and enjoy the stunning images captured by telescopes and space probes. We hope this gallery inspires you to learn more about our universe and appreciate its wonders. Happy exploring!"
+I just wanted to recommend checking out the gallery of 'Everything Shivpuri', which is a comprehensive guide to the town of Shivpuri in Madhya Pradesh, India. It's a great one-stop destination for all the information you need about local businesses, services, and attractions in Shivpuri. Whether you're looking for food shops, garment shops, or other resources, Everything Shivpuri got you covered. 
 
-- **<a href="https://www.behance.net/gallery/164756167/Cosmosis">GALLERY ------></a>**
+<a href="https://www.behance.net/gallery/164756167/Cosmosis">GALLERY ------></a>
 
 ## Login
 
-Users May login to **Cosmosis** using their Google Account! 
-Enjoy your journey through space!
+To add your business to the **Everything Shivpuri**, please note that you must first login using their Google account. Once you have done so, you can access the **"Add Business"** section and provide the necessary details about your business, including its name, address, contact information, and other relevant information. We encourage you to take advantage of this feature to promote your business and help other users discover the many opportunities and resources available in Shivpuri.
 
 <p float="left" align="center">
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FFirefox%20Developer%20Edition%2027.2.23%2001_14_59.png?alt=media&token=7936afda-2967-40fd-9c54-bf579957fd61" width="400" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c90744168517879.643c47c3323a2.png" width="400" />
 </p>
 
-## [ISRO](https://www.isro.gov.in/)
+## [General](https://everythingshivpuri.vercel.app/Genral)
 
-The **Indian Space Research Organisation** (ISRO) is a premier space agency that has made significant contributions to India's space program. Our website provides detailed information on the history and achievements of ISRO.
+**General** knowledge everybody need to know about Shivpuri! Religious Places, Educational Institues, and other general things Exist in this section!
 
-<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20-%20Google%20Chrome%2027.2.23%2002_36_02.png?alt=media&token=185b8e29-26b4-4e10-b309-aa16bfc48f22">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/25de72168517879.643c47c3332d8.png">
 
-## [NASA](https://www.nasa.gov/)
+## [Tourist](https://everythingshivpuri.vercel.app/Tourist)
 
-The National Aeronautics and Space Administration (NASA) is one of the most well-known space agencies in the world. Our website covers the latest news and updates from NASA, including their various missions and projects.
+Everything a **Tourist** Needs to know! From Hotels to Tourist Spots, Theaters, Traveling Coviniences and Food Outlets for you to experience and enjoy.
 
 <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20%E2%80%94%20Firefox%20Developer%20Edition%2027.2.23%2001_16_49.png?alt=media&token=044353fe-515d-4911-a4c2-68a816a88520">
 
-## [Curosity](https://en.wikipedia.org/wiki/Curiosity)
+## [Essentials](https://everythingshivpuri.vercel.app/Essentials)
 
-The **Mars rover** Curiosity has been exploring the Red Planet since 2012, and has made many important discoveries about the planet's history and environment. Our website covers the latest news and findings from the Curiosity mission.
+Some Nice to know **Essential** Services everybody needs to know. This Section Includes Electronic Stores, Garment stores, Saloon and Supermarkets.
 
-<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20%E2%80%94%20Firefox%20Developer%20Edition%2027.2.23%2001_12_40.png?alt=media&token=ff2fbf8d-f2c8-4622-a3de-3aee6c788f99">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d0b41c168517879.643c47c32f3da.png">
 
-## [APOD](https://en.wikipedia.org/wiki/Astronomy_Picture_of_the_Day)
+## [Add Businesses](https://everythingshivpuri.vercel.app/AddBusinesses)
 
-**Astronomy Picture of the Day** (APOD) is a popular website that features stunning photographs of space and the universe. Our website provides a feed of the latest APOD posts, so you can keep up to date with the latest images and discoveries.
+Didn't Got what you were lookin for? Maybe we missed it, but don't worry you can add it yourself in **Add Businesses**, To add your business to the **Everything Shivpuri**, please note that you must first login using your Google account. 
 
-<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20%E2%80%94%20Firefox%20Developer%20Edition%2027.2.23%2001_21_03.png?alt=media&token=d72011ea-a443-4de9-938a-bbfafa74d6ac">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/517ef2168517879.643c47c32a2de.png">
 
-## KPOD
+## [Contact Us](https://everythingshivpuri.vercel.app/Contact)
 
-KPOD. **Know Your APOD**, APOD of any particular date can be found out using this KPOD. Our website provides a feed of the latest APOD posts, so you can keep up to date with the latest images and discoveries.
+We'd love to hear from you! Whether you have a question, comment, or just want to say hi, we're here to listen. **Contact us** by filling out the form below. Thank you for your interest in Everything Shivpuri.
+
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/3e54c1168517879.643c47c32cb7e.png">
+
+## [About](https://everythingshivpuri.vercel.app/About)
+
+Everything Shivpuri is dedicated to promoting the different businesses, shops, and places in Shivpuri by featuring them on our platform. We believe that these establishments deserve recognition and support, and we aim to help them gain more customers and increase their revenue.
 
 <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20%E2%80%94%20Firefox%20Developer%20Edition%2027.2.23%2001_21_07.png?alt=media&token=4389de4e-dc34-4d84-9932-7360c3dc2cd9">
 
 ## Conclusion
 
-Whether you are a space enthusiast or just interested in learning more about the universe, **Cosmosis** is the ultimate space exploration hub. With its comprehensive coverage of space-related topics and engaging content, our website is the perfect destination for anyone looking to explore the mysteries of the universe.
+**Everything Shivpuri**, users can browse through a wide range of establishments including food cafes, restaurants, garment shops, and more. They can view basic details such as phone numbers and locations to help them plan their visits. Additionally, we have an "Add Businesses" section that allows users to suggest new businesses to be featured on our platform. However, users must log in first to make any submissions.
 
+We are committed to providing a user-friendly experience and constantly strive to improve our platform. Thank you for visiting Everything Shivpuri, and we hope you enjoy browsing through our featured establishments.
