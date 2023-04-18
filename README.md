@@ -36,8 +36,8 @@ When a file is added to the pages directory, it's automatically available as a r
 The files inside the pages directory can be used to define most common patterns. The router supports nested files. If you create a nested folder structure, files will automatically be routed in the same way still.
 
 <p float="left" align="center">
-  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/9b98ad168517879.643ea14f40e5d.png" width="250" />
-  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba7591168517879.643ea14f432cb.png" width="550" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/53d1fa168517879.643ea14f42183.png" width="400" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba7591168517879.643ea14f432cb.png" width="400" />
 </p>
 
 ## [Gallery](https://www.behance.net/gallery/168517879/Everything-Shivpuri)
