@@ -29,6 +29,18 @@ Everything Shivpuri has been developed as a Progressive Web App (PWA) using NEXT
   <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33da1e168517879.643e9ddd7a380.jpg" width="250" />
 </p>
 
+## File Based Routing (NEXT)
+
+Next.js has a file-system based router built on the concept of pages.
+When a file is added to the pages directory, it's automatically available as a route.
+The files inside the pages directory can be used to define most common patterns. The router supports nested files. If you create a nested folder structure, files will automatically be routed in the same way still.
+
+<p float="left" align="center">
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/9b98ad168517879.643ea14f40e5d.png" width="200" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba7591168517879.643ea14f432cb.png" width="300" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/53d1fa168517879.643ea14f42183.png.jpg" width="300" />
+</p>
+
 ## [Gallery](https://www.behance.net/gallery/168517879/Everything-Shivpuri)
 
 I just wanted to recommend checking out the gallery of 'Everything Shivpuri', which is a comprehensive guide to the town of Shivpuri in Madhya Pradesh, India. It's a great one-stop destination for all the information you need about local businesses, services, and attractions in Shivpuri. Whether you're looking for food shops, garment shops, or other resources, Everything Shivpuri got you covered.
