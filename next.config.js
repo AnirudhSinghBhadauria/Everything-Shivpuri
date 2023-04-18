@@ -15,7 +15,6 @@ const nextConfig = {
 
     OPEN_WEATHER: "dd96dd6f7380ae41ed9106d253aecb4e",
   },
-
   swcMinify: true,
   compiler: {
     removeConsole: process.env.NODE_ENV !== "development",
