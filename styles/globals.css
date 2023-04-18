@@ -194,3 +194,9 @@ input[type="number"] {
   top: 1.2rem;
   left: 1rem;
 }
+
+
+::selection {
+  background-color: hsl(201, 100%, 84%);
+  color: black;
+}
