@@ -5,10 +5,10 @@ Everything Shivpuri serves as a one-stop destination for all information related
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/e77e5e168517879.643c47c336755.png"/>
 
 <p float="left" align="center">
-  <img src="https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/github%2Fm_Landing.png?alt=media&token=a60e254b-106c-41d4-8b75-0f9cda095264" width="200" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/github%2Fm_Cards.png?alt=media&token=a96e9c70-b03a-4815-ab7f-542c8cbf5b86" width="200" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/github%2Fm_Weather.png?alt=media&token=bb6586a1-fe3a-44a9-8f01-b8557b74e3c4" width="200" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/github%2Fm_TextContent.jpg?alt=media&token=e06e5e58-4d59-4e55-add5-da6ac2d40a10" width="200" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/fbcb3b168517879.643e9c35a68eb.png" width="200" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/54fc25168517879.643e9c35985a4.jpg" width="200" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8cb2ba168517879.643e9c35a3ddd.png" width="200" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8ed2d9168517879.643e9ddd7c43c.jpg" width="200" />
 </p>
 
 ## Features
@@ -24,12 +24,12 @@ Everything Shivpuri serves as a one-stop destination for all information related
 Everything Shivpuri has been developed as a Progressive Web App (PWA) using NEXT. As a PWA, Everything Shivpuri offers a fast and reliable browsing experience to its users, even in areas with poor network connectivity. It can be accessed from any device with a web browser, and **it offers an app-like experience** with features such as push notifications, offline support, and the ability to add to the home screen.
 
 <p float="left" align="center">
-  <img src="https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/github%2Fpwa-1.jpg?alt=media&token=ba2b6087-c3a2-41ea-991a-68838ef1f1ae" width="250" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/github%2Fpwa-2.jpg?alt=media&token=6ca588ec-30fe-43e9-9dd7-e64e7e1a2a0f" width="250" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/everything-shivpuri-c7a4f.appspot.com/o/github%2Fpwa-3.jpg?alt=media&token=9c99de69-6c8b-480b-87a2-d1ea371a474b" width="250" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/69dee7168517879.643e9ddd79227.jpg" width="250" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/35cdbe168517879.643e9ddd7b387.jpg" width="250" />
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33da1e168517879.643e9ddd7a380.jpg" width="250" />
 </p>
 
-## [Gallery](https://www.behance.net/gallery/164756167/Cosmosis)
+## [Gallery](https://www.behance.net/gallery/168517879/Everything-Shivpuri)
 
 I just wanted to recommend checking out the gallery of 'Everything Shivpuri', which is a comprehensive guide to the town of Shivpuri in Madhya Pradesh, India. It's a great one-stop destination for all the information you need about local businesses, services, and attractions in Shivpuri. Whether you're looking for food shops, garment shops, or other resources, Everything Shivpuri got you covered.
 
@@ -53,7 +53,7 @@ To add your business to the **Everything Shivpuri**, please note that you must f
 
 Everything a **Tourist** Needs to know! From Hotels to Tourist Spots, Theaters, Traveling Coviniences and Food Outlets for you to experience and enjoy.
 
-<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20%E2%80%94%20Firefox%20Developer%20Edition%2027.2.23%2001_16_49.png?alt=media&token=044353fe-515d-4911-a4c2-68a816a88520">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/e0ea39168517879.643e9ddd7d3fd.png">
 
 ## [Essentials](https://everythingshivpuri.vercel.app/Essentials)
 
