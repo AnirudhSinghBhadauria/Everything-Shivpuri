@@ -3,7 +3,7 @@ import { getData } from "../../lib/getData";
 import DisplayServices from "../../components/Services/DisplayServices";
 import { useRouter } from "next/router";
 import HeadContent from "components/Helper/HeadContent";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const Services = ({ services }) => {
   const { Error, Data } = services;

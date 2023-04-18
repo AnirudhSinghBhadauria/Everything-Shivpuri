@@ -27,25 +27,24 @@ const Service = ({ service }) => {
 
 export default Service;
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const document = context.params.service;
   const collection = context.params.services;
 
   const serviceData = await getData(collection, document);
 
-  console.log(serviceData);
   return {
     props: { service: serviceData },
   };
 }
 
-export async function getStaticPaths() {
-  const paths = await getData("service", "service");
-  const pathData = paths.Data.array;
-  const path = pathData.map((path) => ({ params: path }));
+// export async function getStaticPaths() {
+//   const paths = await getData("service", "service");
+//   const pathData = paths.Data.array;
+//   const path = pathData.map((path) => ({ params: path }));
 
-  return {
-    paths: path,
-    fallback: false,
-  };
-}
+//   return {
+//     paths: path,
+//     fallback: false,
+//   };
+// }
