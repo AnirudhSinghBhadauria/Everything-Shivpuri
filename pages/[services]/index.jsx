@@ -32,6 +32,12 @@ export async function getStaticProps(context) {
 
   const serviceData = await getData(services, services);
 
+  if (!serviceData) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: { services: serviceData },
   };

@@ -1,0 +1,87 @@
+@import "../assets/base.scss";
+
+.container {
+  width: 100%;
+  @include flex(column, center, center);
+
+
+  h1 {
+    font-size: 30rem;
+    letter-spacing: -3rem;
+    @include flex(column, flex-start, flex-start);
+    text-align: center;
+
+    transform: translateY(-2rem);
+  }
+
+  p {
+    line-height: 1.5rem;
+    transform: translateY(-4rem);
+  }
+
+  .home {
+    padding: 0.75rem 1rem;
+    color: black;
+    background-color: white;
+    margin-top: 2rem;
+    transform: translateY(-4rem);
+    font-size: 1rem;
+    transition: border-radius 0.5s ease;
+
+    &:hover {
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+// -----------------------------MEDIA
+
+@media (max-width: $PAD) {
+  .container {
+    h1 {
+      font-size: 25rem;
+      letter-spacing: -3rem;
+    }
+    p {
+      transform: translateY(-3rem);
+    }
+    .home {
+      transform: translateY(-3rem);
+    }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .container {
+    margin-block: 4rem;
+    h1 {
+      font-size: 15rem;
+      letter-spacing: -1.5rem;
+    }
+    p {
+      transform: translateY(-2rem);
+    }
+    .home {
+      transform: translateY(-2rem);
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .container {
+
+    margin-block: 6rem;
+
+    h1 {
+      font-size: 12rem;
+      letter-spacing: -1.25rem;
+    transform: translateY(-1.5rem);
+    }
+    p {
+      transform: translateY(-1rem);
+    }
+    .home {
+      transform: translateY(-1rem);
+    }
+  }
+}

@@ -33,18 +33,13 @@ export async function getServerSideProps(context) {
 
   const serviceData = await getData(collection, document);
 
+  if (!serviceData) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: { service: serviceData },
   };
 }
-
-// export async function getStaticPaths() {
-//   const paths = await getData("service", "service");
-//   const pathData = paths.Data.array;
-//   const path = pathData.map((path) => ({ params: path }));
-
-//   return {
-//     paths: path,
-//     fallback: false,
-//   };
-// }
