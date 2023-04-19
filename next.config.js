@@ -5,7 +5,8 @@ const nextConfig = {
   images: {
     domains: ["firebasestorage.googleapis.com", "lh3.googleusercontent.com"],
   },
-  env: {
+  
+    env: {
     FIREBASE_apiKey: "AIzaSyD3y87uRSYF-QbZ-DVYyPq_wHRrCn4dhGQ",
     FIREBASE_authDomain: "everything-shivpuri-c7a4f.firebaseapp.com",
     FIREBASE_projectId: "everything-shivpuri-c7a4f",
@@ -15,6 +16,7 @@ const nextConfig = {
 
     OPEN_WEATHER: "dd96dd6f7380ae41ed9106d253aecb4e",
   },
+
   swcMinify: true,
   compiler: {
     removeConsole: process.env.NODE_ENV !== "development",
