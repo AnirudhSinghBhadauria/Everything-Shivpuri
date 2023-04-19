@@ -28,15 +28,10 @@ const About = () => {
 
       <div>
         <p className={`${RegularSemiBold.className} ${classes.content}`}>
-          Welcome to Everything Shivpuri, created by a team of talented students
-          from UIT RGPV Shivpuri as a minor project. Our team includes Anirudh
-          Singh Bhadauria (Developer - UI/UX), Abhyuday Sharma (Graphics),
-          Aditya Tripathi (Graphics), and Ishank Rajiv Pathak (Documentation).{" "}
-          <br />
-          <br /> Everything Shivpuri is dedicated to promoting the different
+          Everything Shivpuri is dedicated to promoting the different
           businesses, shops, and places in Shivpuri by featuring them on our
-          platform. We believe that these establishments deserve recognition and
-          support, and we aim to help them gain more customers and increase
+          platform. I believe that these establishments deserve recognition and
+          support, and I aim to help them gain more customers and increase
           their revenue.
           <br />
           <br /> On Everything Shivpuri, users can browse through a wide range
@@ -47,18 +42,22 @@ const About = () => {
           to be featured on our platform. However, users must log in first to
           make any submissions.
           <br />
-          <br /> We are committed to providing a user-friendly experience and
+          <br /> I am committed to providing a user-friendly experience and
           constantly strive to improve our platform. Thank you for visiting
-          Everything Shivpuri, and we hope you enjoy browsing through our
+          Everything Shivpuri, and I hope you enjoy browsing through our
           featured establishments.
           <br />
           <br />
-          We would love to hear from you! If you have any questions, comments,
-          or feedback about Everything Shivpuri or featured businesses, please
-          feel free to contact our team. We are dedicated to providing the best
-          user experience possible, and your input helps us to achieve that
-          goal. We value your opinions and strive to respond to all inquiries as
-          soon as possible. Thank you for your interest in Everything Shivpuri!
+          I would love to hear from you! If you have any questions, comments, or
+          feedback about Everything Shivpuri or featured businesses, please feel
+          free to contact our team. I am dedicated to providing the best user
+          experience possible, and your input helps us to achieve that goal.
+          <br />
+          <br />
+          Everything Shiivpuri is a minor project that has been developed,
+          UI/UX, documentation all have been done by me. I value your opinions
+          and strive to respond to all inquiries as soon as possible. Thank you
+          for your interest in Everything Shivpuri!
         </p>
 
         <ButtonLink
