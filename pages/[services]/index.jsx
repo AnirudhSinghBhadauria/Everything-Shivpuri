@@ -27,10 +27,10 @@ const Services = ({ services }) => {
 
 export default Services;
 
-export async function getServerSideProps({res, params}) {
+export async function getServerSideProps({ res, params }) {
   res.setHeader(
     "Cache-Control",
-    "public, maxage=604800, stale-while-revalidate=86400"
+    "public, s-maxage=604800, stale-while-revalidate=86400"
   );
 
   const services = params.services;
