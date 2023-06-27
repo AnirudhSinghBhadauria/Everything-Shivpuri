@@ -27,14 +27,14 @@ const Service = ({ service }) => {
 
 export default Service;
 
-export async function getServerSideProps(context, { res }) {
+export async function getServerSideProps({ params, res }) {
   res.setHeader(
     "Cache-Control",
-    "public, s-maxage=365, stale-while-revalidate=59"
+    "public, s-maxage=604800, stale-while-revalidate=86400"
   );
 
-  const document = context.params.service;
-  const collection = context.params.services;
+  const document = params.service;
+  const collection = params.services;
 
   const serviceData = await getData(collection, document);
 

@@ -27,13 +27,13 @@ const Services = ({ services }) => {
 
 export default Services;
 
-export async function getStaticProps(context, { res }) {
+export async function getServerSideProps({res, params}) {
   res.setHeader(
     "Cache-Control",
-    "public, s-maxage=365, stale-while-revalidate=59"
+    "public, maxage=604800, stale-while-revalidate=86400"
   );
 
-  const services = context.params.services;
+  const services = params.services;
 
   const serviceData = await getData(services, services);
 
@@ -48,15 +48,15 @@ export async function getStaticProps(context, { res }) {
   };
 }
 
-export async function getStaticPaths() {
-  const paths = await getData("services", "services");
+// export async function getStaticPaths() {
+//   const paths = await getData("services", "services");
 
-  const pathsData = paths.Data.array;
+//   const pathsData = paths.Data.array;
 
-  const path = pathsData.map((path) => ({ params: { services: path } }));
+//   const path = pathsData.map((path) => ({ params: { services: path } }));
 
-  return {
-    paths: path,
-    fallback: false,
-  };
-}
+//   return {
+//     paths: path,
+//     fallback: false,
+//   };
+// }
