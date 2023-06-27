@@ -27,7 +27,12 @@ const Services = ({ services }) => {
 
 export default Services;
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context, { res }) {
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=365, stale-while-revalidate=59"
+  );
+
   const services = context.params.services;
 
   const serviceData = await getData(services, services);
