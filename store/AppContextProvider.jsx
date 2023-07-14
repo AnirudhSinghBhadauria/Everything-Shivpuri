@@ -33,7 +33,7 @@ const AppContextProvider = (props) => {
       const credential = GoogleAuthProvider.credentialFromResult(response);
       const token = credential.accessToken;
       const user = response.user;
-      Cookies.set("isLoggedIn", true);
+      Cookies.set("isLoggedIn", 'true');
       messageHandeler({ status: "success", value: "Successfully Logged" });
     } catch (error) {
       messageHandeler({ value: `${error.code}`, status: "error" });
